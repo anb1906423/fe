@@ -40,6 +40,7 @@ const ProductDetail = () => {
                                     <meta name='revisit-after' content='1 days' />
                                     <meta http-equiv="content-language" content="vi" />
                                     <meta name='city' content='Cần Thơ'/>
+                                    <meta name='keywords' content='Chi tiết xe Suzuki, chi tiết XL7, Ciaz, chi tiết các dòng xe suzuki'/>
                                 </Head>
                                 <div className="product-infor d-flex flex-row flex-wrap justify-content-start">
                                     <div className="product-imgs">

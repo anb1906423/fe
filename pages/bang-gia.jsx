@@ -23,6 +23,7 @@ const PriceTable = () => {
         <meta http-equiv="content-language" content="vi" />
         <meta name='city' content='Cần Thơ'/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name='keywords' content='Chi tiết giá xe Suzuki, giá xe XL7, giá xe Ciaz, bảng giá xe suzuki, giá xe suzuki cần thơ'/>
         <meta name="description" content="Cập nhật bảng giá mới nhất từng dòng xe Suzuki. XL7, New XL7 Sport Limited, Ciaz, Ertiga, Swift ..." />
       </Head>
       <Heading title="Bảng giá" />

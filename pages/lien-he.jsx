@@ -41,6 +41,7 @@ const Contact = () => {
         <meta http-equiv="content-language" content="vi" />
         <meta name='city' content='Cần Thơ'/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name='keywords' content='tư vấn xe Suzuki, liên hệ suzuki cần thơ, tổng đài tư vấn xu suzuki cần thơ, số điện thoại suzuki cần thơ'/>
         <meta name="description" content="Liên hệ để được tư vấn hoặc cần giải đáp thắc mắc: 0918.941.966 Mr. Tâm hoặc Facebook Nguyễn Văn Tâm."/>
       </Head>
       <Heading title="Liên hệ" />

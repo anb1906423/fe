@@ -132,6 +132,7 @@ const register = () => {
         <meta http-equiv="content-language" content="vi" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name='city' content='Cần Thơ'/>
+        <meta name='keywords' content='giá xe suzuki, giá XL7, giá Ciaz, bảng giá xe suzuki, suzuki cần thơ giá rẻ'/>
         <meta name="description" content="Đăng ký để nhận báo giá xe Suzuki Cần Thơ hôm nay nhanh, chính xác và ưu đãi nhất."/>
       </Head>
       <Heading title="Đăng ký" />

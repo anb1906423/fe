@@ -52,6 +52,7 @@ export default function Home() {
         <meta name='city' content='Cần Thơ'/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="content-language" content="vi" />
+        <meta name='keywords' content='xe Suzuki, suzuki cần thơ, suzuki tây đô, xesuzukicantho.com, xe suzuki cần thơ'/>
         <meta name="description" content="Website trưng bày, tham khảo, chi tiết thông số cũng như giá bán các dòng xe Suzuki chính hãng. Tư vấn tận tình, giá cả hợp lý, đáng tin cậy, được nhiều khách hàng tin tưởng lựa chọn."/>
       </Head>
       <div className={styles.container}>
