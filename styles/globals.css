@@ -1,0 +1,83 @@
+@import './Product.css';
+@import './Header.css';
+@import './Footer.css';
+@import './AccountPage.css';
+@import './grid.css';
+@import './Contact.css';
+@import './AdminPage.css';
+@import './ProductDetail.css';
+@import './ProductAdmin.css';
+@import './AccessItem.css';
+@import './Home.module.css';
+@import './PriceTable.css';
+@import './ContactIconFixed.css';
+@import './Profile.css';
+@import './Loading.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --main-color: #1d3565;
+  --height-header-top: 60px;
+  --height-header-content: 50px;
+}
+
+.bg-main-color {
+  background-color: #1d3565;
+}
+
+.bg-white-color {
+  background-color: #fff;
+}
+
+.text-main-color {
+  color: #1d3565;
+}
+
+.heading h2 {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 4px;
+  font-size: 24px;
+}
+
+.heading h2::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1d3565;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .heading h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading h2 {
+    font-size: 20px;
+  }
+}
+

@@ -1,0 +1,68 @@
+.product-admin {
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+.product-admin th {
+    width: 20%;
+}
+
+.product-admin tr {
+    border-bottom-width: 1px;
+}
+
+.product-admin td {
+    flex: 0 0 20%;
+    overflow: hidden;
+    max-width: 20%;
+    border: none;
+}
+
+.product-admin p {
+    padding: 8px 0;
+    margin: 0;
+}
+
+.table img {
+    max-width: 70px;
+    /* min-width: 80px; */
+    max-height: 70px;
+    /* margin: 0px auto; */
+}
+
+table thead tr {
+    background-color: #E8EAF6;
+}
+
+table {
+    margin-bottom: 0 !important;
+}
+
+table tbody tr:hover {
+    background-color: #E8EAF6;
+    transition: all .1s ease;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.table button {
+    margin: 0px 4px;
+}
+
+@media (max-width: 700px) {
+    .product-admin .createAt {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .manipulation {
+        display: none;
+    }
+    .product-admin td {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .product-admin .name {
+        display: none;
+    }
+}

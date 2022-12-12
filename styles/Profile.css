@@ -1,0 +1,25 @@
+.profile-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-container .submit-btn {
+    width: 90%;
+    margin: 12px 0;
+}
+
+.profile-container .profile {
+    text-align: left;
+}
+
+.profile-container .profile td {
+    border-style: none;
+}
+
+@media (max-width: 576px) {
+    .profile-container .submit-btn {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}

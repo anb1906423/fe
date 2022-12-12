@@ -1,0 +1,59 @@
+.account-page {
+    width: 100%;
+    position: relative;
+    height: calc(100vh + 70px);
+}
+
+.login .login-wrapper,
+.account-page .register-wrapper {
+    position: absolute;
+    width: 400px;
+    max-width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 0;
+}
+
+.login-wrapper label,
+.register-wrapper label {
+    padding: 4px 0;
+}
+
+.login-wrapper input,
+.register-wrapper input {
+    padding: 8px;
+}
+
+.login-wrapper .btn,
+.register-wrapper .btn {
+    margin: 20px 0;
+    border: 1px solid var(--main-color);
+}
+
+.login-wrapper .submit-btn,
+.account-page .submit-btn {
+    background-color: var(--main-color);
+}
+
+.login-wrapper .submit-btn:hover,
+.account-page .submit-btn:hover {
+    border: 1px solid var(--main-color);
+    background-color: #C5CAE9;
+}
+
+.login-wrapper .sub-btn,
+.register-wrapper .sub-btn {
+    color: var(--main-color);
+}
+
+@media (max-width: 576px) {
+    .login .login-wrapper,
+    .account-page .register-wrapper {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 10px;
+    }
+}

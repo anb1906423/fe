@@ -1,0 +1,71 @@
+.contact-icon-group {
+    position: fixed;
+    width: 50px;
+    z-index: 1010;
+    bottom: 0;
+    right: 0;
+    margin: 6px 0;
+}
+
+.contact-icon-group img {
+    width: 100%;
+    height: auto;
+}
+
+.contact-icon-group .contact-icon-fixed img {
+    padding: 8px;
+}
+
+.contact-icon-group div {
+    position: relative;
+}
+
+.icon-call-phone {
+    cursor: pointer;
+    animation: callPhone 1s linear infinite;
+    position:  relative;
+    transform: rotate(-32deg);
+}
+
+.icon-call-phone::after {
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--main-color);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: callPhoneCircle 1s linear infinite;
+}
+
+.phone-number-box {
+    cursor: pointer;
+    position: absolute;
+    left: -250%;
+    bottom: 0;
+    height: 32px;
+    padding: 0 16px;
+    margin: 9px 0;
+    border-radius: 40px;
+    line-height: 32px;
+    background-color: #EF9A9A;
+    transition: all 0.2s linear;
+}
+
+@keyframes callPhone {
+    from {
+        transform: rotate(-32deg);
+    } to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes callPhoneCircle {
+    to {
+        width: 120%;
+        height: 120%;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,86 @@
+.price-table-manage-page .add-price-table-group {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.add-price-table-group input {
+    padding: 3px;
+    margin: 4px 0;
+}
+
+.add-price-table-group .version-price-box label {
+    padding: 0 6px 0 0;
+}
+
+.price-table-item {
+    max-width: 500px;
+    margin: 12px auto;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.price-table-item .img-wrapper img {
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+}
+
+.price-table-item .name-car {
+    padding: 4px;
+}
+
+.price-table-item .icon-delete-wrapper {
+    font-size: 20px;
+    top: 0;
+    right: 0;
+    padding: 0px 8px;
+    cursor: pointer;
+}
+
+.price-table-item .table td {
+    padding: 0px;
+    max-width: 50%;
+}
+
+.price-table-item .table td div {
+    padding: 5px;
+    border-top: 1.2px solid #ccc;
+}
+
+.add-price-table-group p {
+    padding-top: 6px;
+}
+
+.add-price-table-group button {
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+    padding: 6px 16px;
+    transition: all .2s linear;
+}
+
+.add-price-table-group button:hover {
+    background-color: #C5CAE9;
+    color: var(--black);
+}
+
+@media (max-width: 576px) {
+    .price-table-item {
+        margin: 12px 6px;
+    }
+    .price-table-item .img-wrapper img {
+        max-width: 90%;
+    }
+    .price-table-manage-page .add-price-table-group {
+        max-width: 300px;
+    }
+    .add-price-table-group input{
+        margin: 4px 4px;
+    }
+    .add-price-table-group label {
+        margin: 0px 4px;
+        width: 84px;
+    }
+}
