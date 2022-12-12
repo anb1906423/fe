@@ -19,7 +19,7 @@ const footerItems = [
       },
       {
         icon: <FaMailBulk />,
-        content: 'vantam@gmail.com',
+        content: 'trantam.tmtn90@gmail.com',
       },
       {
         icon: <FaFirefox />,

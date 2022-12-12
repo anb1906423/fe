@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import AccessItem from '../components/AccessItem'
 import { FaCarAlt, FaCommentDollar, FaPhoneSquareAlt, FaFacebookSquare } from 'react-icons/fa'
-import {homeAPI} from "../config"
+import { homeAPI } from "../config"
 
 
 export default function Home() {
