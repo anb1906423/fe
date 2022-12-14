@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { FaTimes } from 'react-icons/fa'
-import { swalert, swtoast} from "../mixins/swal.mixin";
+import { swalert, swtoast } from "../mixins/swal.mixin";
 import { useCookies } from 'react-cookie'
 import { homeAPI } from "../config"
 
@@ -9,7 +9,6 @@ const PriceTableItem = (props) => {
   const [priceTable, setPriceTable] = useState([])
   const version = props.version
   const price = props.price
-  var self = this;
 
   const [cookies, setCookies] = useCookies(['user'])
   const [roles, setRoles] = useState('')
@@ -55,7 +54,7 @@ const PriceTableItem = (props) => {
             setPriceTable(priceTableList);
             swtoast.success({
               text: "Bảng giá đã được xóa!!",
-          });
+            });
           } catch (err) {
             if (err.response.status === 400) {
               console.log("PriceTable id is required!")
@@ -63,7 +62,7 @@ const PriceTableItem = (props) => {
             console.log(`Error: ${err.message}`);
             swtoast.error({
               text: "Đã xảy ra lỗi khi xóa bảng giá. Vui lòng reload lại trang!",
-          });
+            });
           }
         }
       })

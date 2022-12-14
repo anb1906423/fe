@@ -13,7 +13,7 @@ export default function Home() {
   const [products, setProducts] = useState([])
   console.log(homeAPI);
   useEffect(() => {
-    fetch(homeAPI+'/admin')
+    fetch(homeAPI + '/admin')
       .then((res) => res.json())
       .then((products) => {
         setProducts(products)
@@ -47,13 +47,13 @@ export default function Home() {
     <div className={styles.main}>
       <Head>
         <title>Trang chủ</title>
-        <meta name="title" content="Suzuki Cần Thơ - Đại lý ô tô Suzuki chính hãng, giá rẻ và uy tín"/>
+        <meta name="title" content="Suzuki Cần Thơ - Đại lý ô tô Suzuki chính hãng, giá rẻ và uy tín" />
         <meta name='revisit-after' content='1 days' />
-        <meta name='city' content='Cần Thơ'/>
+        <meta name='city' content='Cần Thơ' />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="content-language" content="vi" />
-        <meta name='keywords' content='xe Suzuki, suzuki cần thơ, suzuki tây đô, xesuzukicantho.com, xe suzuki cần thơ'/>
-        <meta name="description" content="Website trưng bày, tham khảo, chi tiết thông số cũng như giá bán các dòng xe Suzuki chính hãng. Tư vấn tận tình, giá cả hợp lý, đáng tin cậy, được nhiều khách hàng tin tưởng lựa chọn."/>
+        <meta name='keywords' content='xe Suzuki, suzuki cần thơ, suzuki tây đô, xesuzukicantho.com, xe suzuki cần thơ' />
+        <meta name="description" content="Website trưng bày, tham khảo, chi tiết thông số cũng như giá bán các dòng xe Suzuki chính hãng. Tư vấn tận tình, giá cả hợp lý, đáng tin cậy, được nhiều khách hàng tin tưởng lựa chọn." />
       </Head>
       <div className={styles.container}>
         <Carousel />

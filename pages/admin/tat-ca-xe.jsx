@@ -138,10 +138,10 @@ const adminPage = () => {
       console.log(JSON.stringify(response?.data));
       console.log(response?.data);
       console.log(JSON.stringify(response))
+      setProducts(product => [...product, response?.data])
       swtoast.success({
         text: "Xe được thêm thành công!!",
       });
-      setProducts(product => [...product, response?.data])
       setName('')
       setPrice('')
       setDescription('')

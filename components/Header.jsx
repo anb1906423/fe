@@ -6,7 +6,7 @@ import Cookie, { useCookies } from 'react-cookie'
 
 const Header = () => {
   let [url, setUrl] = useState('')
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
   const [cookies, setCookie] = useCookies(['user']);
   const [roles, setRoles] = useState('-1')
 
@@ -18,28 +18,32 @@ const Header = () => {
 
   useEffect(() => {
     if (cookies.user != undefined) {
-
       const userCookie = cookies.user
       setRoles(userCookie.roles)
     }
   })
-
+  
   useEffect(() => {
     if (isOpen === true) {
       $('.menu-item').toggleClass('d-block w-100')
       $('.menu').toggleClass('text-center w-100')
+      $('.opacity').removeClass('d-none')
     } else {
-      $('.menu-item').toggleClass('d-block w-100')
-      $('.menu').toggleClass('text-center w-100')
+      $('.menu-item').removeClass('d-block w-100')
+      $('.menu').removeClass('text-center w-100')
+      $('.opacity').addClass('d-none')
     }
   }, [isOpen])
-
+  
   useEffect(() => {
     $(".bar-icon").click(() => {
       setIsOpen(!isOpen)
     })
+    $('.opacity').click(() => {
+      setIsOpen(!isOpen)
+    })
   }, [isOpen])
-
+  
   useEffect(() => {
     setUrl(window.location.pathname)
   }, [])
@@ -104,6 +108,7 @@ const Header = () => {
         <div className="loader-section section-left"></div>
         <div className="loader-section section-right"></div>
       </div>
+      <div className="opacity position-absolute d-none"></div>
     </div>
   )
 }

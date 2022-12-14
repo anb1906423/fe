@@ -8,6 +8,7 @@
     background-color: var(--white);
     height: var(--height-header-top);
     position: relative;
+    z-index: 1000;
 }
 
 .header-top .logo {

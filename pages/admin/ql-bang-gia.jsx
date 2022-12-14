@@ -113,8 +113,9 @@ const PriceTableManagePage = () => {
             console.log(JSON.stringify(response?.data));
             console.log(response?.data);
             console.log(JSON.stringify(response))
+            setPriceTable(priceTable => [...priceTable, response?.data])
             swtoast.success({
-                text: "Xe được thêm thành công!!",
+                text: "Bảng giá được thêm thành công!!",
             });
             setNameCar('')
             setPrice('')
