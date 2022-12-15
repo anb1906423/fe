@@ -13,8 +13,6 @@ const PriceTableManagePage = () => {
     const nameCarRef = useRef()
     const srcCarRef = useRef()
     const priceRef = useRef()
-    console.log(homeAPI);
-    var self = this
 
     const [nameCar, setNameCar] = useState('')
     const [srcCar, setSrcCar] = useState('')
@@ -47,11 +45,11 @@ const PriceTableManagePage = () => {
     })
 
     useEffect(() => {
-        setVersion([version1, version2, version3])
-    }, [version1, version2, version3])
+        setVersion([version1, version2, version3, version4])
+    }, [version1, version2, version3, version4])
     useEffect(() => {
-        setPrice([price1, price2, price3])
-    }, [price1, price2, price3])
+        setPrice([price1, price2, price3, price4])
+    }, [price1, price2, price3, price4])
 
     useEffect(() => {
         let isMounted = true;
@@ -110,10 +108,9 @@ const PriceTableManagePage = () => {
                     withCredentials: true
                 }
             )
-            console.log(JSON.stringify(response?.data));
+            // console.log(JSON.stringify(response?.data));
             console.log(response?.data);
-            console.log(JSON.stringify(response))
-            setPriceTable(priceTable => [...priceTable, response?.data])
+            // console.log(JSON.stringify(response))
             swtoast.success({
                 text: "Bảng giá được thêm thành công!!",
             });
