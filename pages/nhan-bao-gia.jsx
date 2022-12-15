@@ -109,11 +109,11 @@ const register = () => {
     } catch (err) {
       if (!err?.response) {
         setErr('No Server Response!')
-      } else if (err.response.status === 400) {
+      } else if (err.response?.status === 400) {
         setErr('Missing Fullname, Phonenumber or Password!')
-      } else if (err.response.status === 401) {
+      } else if (err.response?.status === 401) {
         setErr('Unauthorized')
-      } else if (err.response.status === 422) {
+      } else if (err.response?.status === 422) {
         setErr("Số điện thoại hoặc địa chỉ email đã được sử dụng!");
       } else {
         setErr('Register fail!')
