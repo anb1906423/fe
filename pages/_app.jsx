@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import './globals.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import Script from 'next/script'
 import Layout from '../components/Layout'
