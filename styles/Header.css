@@ -62,11 +62,22 @@
     color: var(--main-color);
     background-color: var(--white);
 }
+.carousel-indicators {
+    margin-bottom: 0 !important;
+}
 
 /* Ipad */
 @media (max-width: 768px) {
     .header-top {
         height: 56px;
+    }
+    .carousel-indicators button {
+        max-width: 20px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        max-width: 26px;
+        max-height: 26px;
     }
 }
 
@@ -80,6 +91,15 @@
     }
     .bar-icon {
         height: 44px;
+    }
+    .carousel-indicators button {
+        max-width: 16px;
+        max-height: 2px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        max-width: 20px;
+        max-height: 20px;
     }
 }
 
