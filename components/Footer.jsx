@@ -47,11 +47,11 @@ const footerItems = [
 ]
 const Footer = () => {
   const [showPhoneNumber, setShowPhoneNumber] = useState(false)
-  useEffect(() => {
-    $('.icon-call-phone').click(() => {
-      setShowPhoneNumber(!showPhoneNumber)
-    })
-  })
+  // useEffect(() => {
+  //   $('.icon-call-phone').click(() => {
+  //     setShowPhoneNumber(!showPhoneNumber)
+  //   })
+  // })
   return (
     <div className='footer'>
       <div className='footer-list d-flex flex-wrap justify-content-around'>
@@ -92,13 +92,13 @@ const Footer = () => {
         </label>
         <div>
           <label className="contact-icon-fixed icon-call-phone">
-            <a target='_blank'><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png?20210306055547" alt="" /></a>
+            <a href="tel:0918941966"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png?20210306055547" alt="" /></a>
           </label>
-          {
+          {/* {
             showPhoneNumber == true ?
             <label className="phone-number-box"><b>0918.941.966</b></label>
             : ''
-          }
+          } */}
         </div>
       </div>
     </div>
