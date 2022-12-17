@@ -43,7 +43,7 @@ const ProductDetail = () => {
                                     <meta name='keywords' content='Chi tiết xe Suzuki, chi tiết XL7, Ciaz, chi tiết các dòng xe suzuki'/>
                                 </Head>
                                 <div className="product-infor d-flex flex-row flex-wrap justify-content-start">
-                                    <div className="product-imgs">
+                                    <div className="product-imgs d-flex justify-content-center">
                                         <img src={item.src} alt="" />
                                     </div>
                                     <div className="product-content">
@@ -62,7 +62,7 @@ const ProductDetail = () => {
                 })
             }
             <Heading title="Một vài mẫu xe khác" />
-            <div className="other-products w-100 d-flex flex-row flex-wrap justify-content-around">
+            <div className="other-products w-100 d-flex flex-row flex-wrap align-items-center justify-content-around">
                 {
                     otherProducts.map((item, index) => {
                         if (index <= 2) {
