@@ -44,6 +44,7 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     animation: callPhoneCircle 1s linear infinite;
+    z-index: -10;
 }
 
 .phone-number-box {
