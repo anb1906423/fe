@@ -6,6 +6,7 @@ import {homeAPI} from "../config"
 
 const PriceTable = () => {
   const [priceTable, setPriceTable] = useState([])
+  const [roles, setRoles] = useState(0)
 
   useEffect(() => {
     fetch(`${homeAPI}/admin/find-all-price-table`)
