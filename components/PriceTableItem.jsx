@@ -13,7 +13,7 @@ const PriceTableItem = (props) => {
   const [cookies, setCookies] = useCookies(['user'])
   const [roles, setRoles] = useState('')
   useEffect(() => {
-    if (cookies.user != '') {
+    if (cookies.user != undefined) {
       const userCookie = cookies.user
       setRoles(userCookie.roles)
     }
