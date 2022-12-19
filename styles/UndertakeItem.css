@@ -1,0 +1,50 @@
+.undertake-wrapper {
+    padding-top: 10px;
+}
+
+.undertake-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background-color: #ccc;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .8;
+}
+
+.undertake-item .title-undertake {
+    padding: 0px 28px;
+}
+
+.undertake-item .des-undertake {
+    padding: 0 18px;
+}
+
+.undertake-box .undertake-item {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    text-align: center;
+    padding: 4px 8px;
+}
+
+
+.undertake-box .icon-item-undertake {
+    font-size: 40px;
+    margin: 18px;
+}
+
+@media (max-width: 768px) {
+    .undertake-box .undertake-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .undertake-box .undertake-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

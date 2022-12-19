@@ -7,6 +7,8 @@ const Heading = (props) => {
         fontWeight: 'bold',
         padding: '8px',
         color: 'var(--main-color)',
+        maxWidth: '420px',
+        margin: '0 auto',
     }
     return (
         <div className='heading' style={headingStyle}>

@@ -2,16 +2,16 @@ import styles from '../styles/Home.module.css'
 import Carousel from '../components/Carousel'
 import Heading from '../components/Heading'
 import ProductItem from '../components/ProductItem'
+import UndertakeItem from '../components/UndertakeItem'
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import AccessItem from '../components/AccessItem'
-import { FaCarAlt, FaCommentDollar, FaPhoneSquareAlt, FaFacebookSquare } from 'react-icons/fa'
+import { FaCarAlt, FaCommentDollar, FaPhoneSquareAlt, FaFacebookSquare, FaMoneyCheckAlt, FaCalendarCheck, FaHandshake } from 'react-icons/fa'
 import { homeAPI } from "../config"
 
 
 export default function Home() {
   const [products, setProducts] = useState([])
-  console.log(homeAPI);
   useEffect(() => {
     fetch(homeAPI + '/admin')
       .then((res) => res.json())
@@ -78,6 +78,15 @@ export default function Home() {
                 }
               })
             }
+          </div>
+        </div>
+
+        <div className="undertake-wrapper position-relative">
+          <Heading title="Cam kết khi mua xe tại Suzuki Tây Đô - Cần Thơ" />
+          <div className="undertake-box d-flex flex-wrap justify-content-around">
+            <UndertakeItem icon={<FaMoneyCheckAlt className="icon-item-undertake" />} title="Thanh toán và nhận xe nhanh chóng" des="BMW Cần Thơ luôn cam kết mang lại mức giá ưu đãi nhất cho quý khách với thời gian giao xe nhanh nhất" />
+            <UndertakeItem icon={<FaCalendarCheck className="icon-item-undertake" />} title="Cung cấp các dòng xe chính hãng" des="BMW Cần Thơ luôn cung cấp các dòng xe chính hãng được sản xuất tại Việt Nam và nhập khẩu với các tiêu chuẩn toàn cầu" />
+            <UndertakeItem icon={<FaHandshake className="icon-item-undertake" />} title="Dịch vụ bảo hành, bảo dưỡng hàng đầu" des="BMW Cần Thơ luôn cam kết chăm sóc kỹ lưỡng và chế độ hậu mãi tốt nhất cho Quý Khách khi mua xe ô tô tại đây" />
           </div>
         </div>
       </div>
