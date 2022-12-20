@@ -158,6 +158,14 @@
 }
 
 .customer-table td {
+    border: none;
+}
+
+.customer-table tr {
+    border-bottom-width: 1px;
+}
+
+.customer-table td {
     flex: 0 0 20%;
     overflow: hidden;
     max-width: 20%;
