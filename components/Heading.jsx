@@ -5,9 +5,8 @@ const Heading = (props) => {
         textAlign: 'center',
         textTransform: 'uppercase',
         fontWeight: 'bold',
-        padding: '8px',
+        padding: '8px 8px',
         color: 'var(--main-color)',
-        maxWidth: '420px',
         margin: '0 auto',
     }
     return (
