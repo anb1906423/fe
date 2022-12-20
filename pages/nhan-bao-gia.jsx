@@ -16,6 +16,7 @@ const register = () => {
   const fullNameRef = useRef();
   const phoneNumberRef = useRef();
   const emailRef = useRef();
+  const modelRef = useRef();
   const pwdRef = useRef();
 
   const [fullName, setFullname] = useState('')
@@ -33,6 +34,8 @@ const register = () => {
   const [validPwd, setValidPwd] = useState(false)
   const [pwdFocus, setPwdFocus] = useState(false)
 
+  const [model, setModel] = useState('')
+
   const [err, setErr] = useState()
   const [success, setSuccess] = useState("")
 
@@ -48,20 +51,20 @@ const register = () => {
     setValidPhoneNumber(PHONENUMBER_REGEX.test(phoneNumber));
   }, [phoneNumber]);
 
-  useEffect(() => {
-    setValidPwd(PWD_REGEX.test(pwd));
-  }, [pwd]);
+  // useEffect(() => {
+  //   setValidPwd(PWD_REGEX.test(pwd));
+  // }, [pwd]);
 
   useEffect(() => {
     setErr('')
-  }, [fullName, email, phoneNumber, pwd])
+  }, [fullName, email, phoneNumber, pwd, model])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const v1 = EMAIL_REGEX.test(email);
     const v2 = PHONENUMBER_REGEX.test(phoneNumber);
-    const v3 = PWD_REGEX.test(pwd);
+    // const v3 = PWD_REGEX.test(pwd);
     if (!v1) {
       emailRef.current.focus();
       setErr('Địa chỉ email không hợp lệ!');
@@ -72,20 +75,20 @@ const register = () => {
       setErr('Số điện thoại không hợp lệ hoặc đã được sử dụng!');
       return
     }
-    if (!v3) {
-      pwdRef.current.focus();
-      setErr('Mật khẩu không hợp lệ!');
-      return
-    }
+    // if (!v3) {
+    //   pwdRef.current.focus();
+    //   setErr('Mật khẩu không hợp lệ!');
+    //   return
+    // }
 
-    if (pwd.length < 8) {
-      pwdRef.current.focus();
-      setErr('Mật khẩu phải ít nhất 8 ký tự!');
-      return
-    }
+    // if (pwd.length < 8) {
+    //   pwdRef.current.focus();
+    //   setErr('Mật khẩu phải ít nhất 8 ký tự!');
+    //   return
+    // }
     try {
       var response = await axios.post(REGISTER_URL,
-        JSON.stringify({ fullName, phoneNumber, email, pwd }),
+        JSON.stringify({ fullName, phoneNumber, email, pwd, model }),
         {
           headers: {
             'Content-Type': 'application/json'
@@ -105,12 +108,13 @@ const register = () => {
       setPhoneNumber('')
       setEmail('')
       setPwd('')
-      setSuccess("Đăng ký nhận báo giá thành công, chúng tôi sẽ liên hệ sớm nhất có thể!")
+      setModel('')
+      setSuccess("Suzuki Tây Đô - Cần Thơ đã tiếp nhận thông tin của quý khách!")
     } catch (err) {
       if (!err?.response) {
         setErr('No Server Response!')
       } else if (err.response?.status === 400) {
-        setErr('Missing Fullname, Phonenumber or Password!')
+        setErr('Vui lòng nhập đủ họ tên và số điện thoại!')
       } else if (err.response?.status === 401) {
         setErr('Unauthorized')
       } else if (err.response?.status === 422) {
@@ -135,7 +139,7 @@ const register = () => {
         <meta name='keywords' content='giá xe suzuki, giá XL7, giá Ciaz, bảng giá xe suzuki, suzuki cần thơ giá rẻ'/>
         <meta name="description" content="Đăng ký để nhận báo giá xe Suzuki Cần Thơ hôm nay nhanh, chính xác và ưu đãi nhất."/>
       </Head>
-      <Heading title="Đăng ký" />
+      <Heading title="Đăng ký nhận báo giá" />
       <div className="register-wrapper">
         <div className="main-form">
           <form action="" onSubmit={handleSubmit} className="form-log-up">
@@ -181,9 +185,21 @@ const register = () => {
               onBlur={() => setEmailFocus(false)}
               required
             />
-            <label htmlFor="pwd" className="d-block">Mật khẩu:</label>
+            <label htmlFor="model-car" className="d-block">Dòng xe:</label>
             <input
               className="w-100"
+              type="text"
+              name="model-car"
+              id="model-car"
+              placeholder="Dòng xe bạn quan tâm"
+              onChange={(e) => setModel(e.target.value)}
+              value={model}
+              ref={modelRef}
+              required
+            />
+            <label htmlFor="pwd" className="d-none">Mật khẩu:</label>
+            <input
+              className="w-100 d-none"
               type="password"
               name="pwd"
               id="pwd"
@@ -193,11 +209,11 @@ const register = () => {
               ref={pwdRef}
               onFocus={() => setPwdFocus(true)}
               onBlur={() => setPwdFocus(false)}
-              required
+              // required
             />
             <p className="text-danger">{err}</p>
             <p className="text-success">{success}</p>
-            <button className="btn submit-btn log-up-btn w-100 text-white" type="submit">Đăng ký nhận báo giá</button>
+            <button className="btn submit-btn log-up-btn w-100 text-white" type="submit">Đăng ký</button>
             <p className="have-account text-center">Nếu bạn là admin?</p>
             <Link href="/dang-nhap">
               <button className="btn sub-btn w-100">Đăng nhập</button>

@@ -113,7 +113,7 @@ const inforCustomer = () => {
                         <th className="">Họ và tên</th>
                         <th className="">Số điện thoại</th>
                         <th className="col-email">Địa chỉ email</th>
-                        <th className="date-register">Ngày đăng ký</th>
+                        <th className="date-register">Dòng xe</th>
                         <th className="consulted-box">Đã tư vấn</th>
                     </tr>
                 </thead>
@@ -122,7 +122,7 @@ const inforCustomer = () => {
                         users.map((item, index) => {
                             if (item.roles !== 1) {
                                 return (
-                                    <tr key={index} className="w-100 consult-tr d-flex align-items-center justify-content-around">
+                                    <tr title={converTime(item.created)} key={index} className="w-100 consult-tr d-flex align-items-center justify-content-around">
                                         <td className="">{item.fullName}</td>
                                         <td className="">
                                             {item.phoneNumber}<FaRegCopy className="copy-icon" onClick={() => copy(item.phoneNumber)} />
@@ -130,7 +130,7 @@ const inforCustomer = () => {
                                         <td className="col-email">
                                             {sliceEmail(item.email)}<FaRegCopy className="copy-icon" onClick={() => copy(item.email)} />
                                         </td>
-                                        <td className="text-center date-register">{converTime(item.created)}</td>
+                                        <td className="text-center date-register">{item.modelInterest}</td>
                                         <td className='consulted-box consulted-group'>
                                             <FaTrash onClick={() => deleteUser(item.id)} />
                                         </td>
