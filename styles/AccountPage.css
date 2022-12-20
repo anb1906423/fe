@@ -1,7 +1,7 @@
 .account-page {
     width: 100%;
     position: relative;
-    height: calc(100vh + 70px);
+    min-height: calc(100vh + 100px);
 }
 
 .login .login-wrapper,
@@ -22,6 +22,10 @@
 .login-wrapper input,
 .register-wrapper input {
     padding: 8px;
+}
+
+.register-wrapper input[type='radio'] {
+    margin: 0px 6px;
 }
 
 .login-wrapper .btn,

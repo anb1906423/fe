@@ -8,7 +8,7 @@ import axios from 'axios'
 import Cookie, { useCookies } from 'react-cookie'
 import { FaTrash } from 'react-icons/fa'
 import $ from 'jquery'
-import {homeAPI} from "../../config"
+import { homeAPI } from "../../config"
 
 const inforCustomer = () => {
     const [users, setUsers] = useState([])
@@ -22,7 +22,7 @@ const inforCustomer = () => {
         if (cookies.user != '') {
             userCookie = cookies.user
             setRoles(userCookie.roles)
-          }
+        }
     })
 
     useEffect(() => {
@@ -103,18 +103,18 @@ const inforCustomer = () => {
     return (
         <div className="infor-customer w-100">
             <Head>
-                <title>Khách hàng chưa tư vấn</title>
+                <title>Khách hàng chưa báo giá</title>
             </Head>
             <HeaderAdmin />
-            <Heading title='Khách hàng chờ tư vấn' />
+            <Heading title='Khách hàng chờ báo giá' />
             <table className='table customer-table w-100'>
                 <thead className="w-100 text-center">
                     <tr className="fs-6 w-100 align-items-center d-flex justify-content-around">
                         <th className="">Họ và tên</th>
-                        <th className="">Số điện thoại</th>
-                        <th className="col-email">Địa chỉ email</th>
+                        <th className="">TT Liên hệ</th>
                         <th className="date-register">Dòng xe</th>
-                        <th className="consulted-box">Đã tư vấn</th>
+                        <th className="payment">Hình thức</th>
+                        <th className="consulted-box">Đã báo giá</th>
                     </tr>
                 </thead>
                 <tbody className="w-100 text-center">
@@ -126,11 +126,14 @@ const inforCustomer = () => {
                                         <td className="">{item.fullName}</td>
                                         <td className="">
                                             {item.phoneNumber}<FaRegCopy className="copy-icon" onClick={() => copy(item.phoneNumber)} />
-                                        </td>
-                                        <td className="col-email">
                                             {sliceEmail(item.email)}<FaRegCopy className="copy-icon" onClick={() => copy(item.email)} />
                                         </td>
                                         <td className="text-center date-register">{item.modelInterest}</td>
+                                        <td className="payment">
+                                            {
+                                                item.isCash == true ? 'Tiền mặt' : 'Trả góp'
+                                            }
+                                        </td>
                                         <td className='consulted-box consulted-group'>
                                             <FaTrash onClick={() => deleteUser(item.id)} />
                                         </td>

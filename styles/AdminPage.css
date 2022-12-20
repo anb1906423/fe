@@ -219,7 +219,7 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .col-email {
+    .payment {
         display: none;
     }
     .customer-table th {

@@ -8,7 +8,7 @@ const HeaderAdmin = () => {
       href: '/admin/tat-ca-xe',
     },
     {
-      name: 'Tư vấn',
+      name: 'Báo giá',
       href: '/admin/tu-van',
     },
     {

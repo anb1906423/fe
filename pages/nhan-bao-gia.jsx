@@ -3,7 +3,7 @@ import Heading from '../components/Heading'
 import Head from 'next/head'
 import Link from 'next/link'
 import axios from './api/axios'
-import {homeAPI} from "../config"
+import { homeAPI } from "../config"
 
 import { swtoast } from "../mixins/swal.mixin";
 
@@ -15,6 +15,7 @@ const REGISTER_URL = `${homeAPI}/register`
 const register = () => {
   const fullNameRef = useRef();
   const phoneNumberRef = useRef();
+  const paymentRef = useRef();
   const emailRef = useRef();
   const modelRef = useRef();
   const pwdRef = useRef();
@@ -25,6 +26,8 @@ const register = () => {
   const [phoneNumber, setPhoneNumber] = useState('')
   const [validPhoneNumber, setValidPhoneNumber] = useState(false)
   const [phoneNumberFocus, setPhoneNumberFocus] = useState(false)
+
+  const [isCash, setIsCash] = useState(true)
 
   const [email, setEmail] = useState('')
   const [validEmail, setValidEmail] = useState(false)
@@ -57,7 +60,7 @@ const register = () => {
 
   useEffect(() => {
     setErr('')
-  }, [fullName, email, phoneNumber, pwd, model])
+  }, [fullName, email, phoneNumber, isCash, pwd, model])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -88,7 +91,7 @@ const register = () => {
     // }
     try {
       var response = await axios.post(REGISTER_URL,
-        JSON.stringify({ fullName, phoneNumber, email, pwd, model }),
+        JSON.stringify({ fullName, phoneNumber, isCash, email, pwd, model }),
         {
           headers: {
             'Content-Type': 'application/json'
@@ -135,9 +138,9 @@ const register = () => {
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name='city' content='Cần Thơ'/>
-        <meta name='keywords' content='giá xe suzuki, giá XL7, giá Ciaz, bảng giá xe suzuki, suzuki cần thơ giá rẻ'/>
-        <meta name="description" content="Đăng ký để nhận báo giá xe Suzuki Cần Thơ hôm nay nhanh, chính xác và ưu đãi nhất."/>
+        <meta name='city' content='Cần Thơ' />
+        <meta name='keywords' content='giá xe suzuki, giá XL7, giá Ciaz, bảng giá xe suzuki, suzuki cần thơ giá rẻ' />
+        <meta name="description" content="Đăng ký để nhận báo giá xe Suzuki Cần Thơ hôm nay nhanh, chính xác và ưu đãi nhất." />
       </Head>
       <Heading title="Đăng ký nhận báo giá" />
       <div className="register-wrapper">
@@ -191,12 +194,37 @@ const register = () => {
               type="text"
               name="model-car"
               id="model-car"
-              placeholder="Dòng xe bạn quan tâm"
+              placeholder="Dòng xe"
               onChange={(e) => setModel(e.target.value)}
               value={model}
               ref={modelRef}
               required
             />
+            <label htmlFor="payment" className="d-block">Hình thức thanh toán bạn quan tâm:</label>
+            <div className="form-check-payment d-flex align-items-center justify-content-around">
+              <div className='cash'>
+                <input
+                  value='cash'
+                  id='cash'
+                  name="payment"
+                  type="radio"
+                  onClick={() => setIsCash(true)}
+                  defaultChecked={isCash}
+                />
+                <label name="" htmlFor="cash">Tiền mặt</label>
+              </div>
+              <div className='installment'>
+                <input
+                  value='installment'
+                  id='installment'
+                  name="payment"
+                  type="radio"
+                  onClick={() => setIsCash(false)}
+                  // checked={!isCash}
+                />
+                <label type="" htmlFor="installment">Trả góp</label>
+              </div>
+            </div>
             <label htmlFor="pwd" className="d-none">Mật khẩu:</label>
             <input
               className="w-100 d-none"
@@ -209,7 +237,7 @@ const register = () => {
               ref={pwdRef}
               onFocus={() => setPwdFocus(true)}
               onBlur={() => setPwdFocus(false)}
-              // required
+            // required
             />
             <p className="text-danger">{err}</p>
             <p className="text-success">{success}</p>
