@@ -52,6 +52,19 @@ const Product = () => {
           })
         }
       </div>
+
+      <Heading title="Xe đã qua sử dụng" />
+      <div className="product-container d-flex flex-row flex-wrap justify-content-start ">
+        {
+          products.map((item, index) => {
+            if (item.newProduct === false) {
+              return (
+                <ProductItem className="" key={index} name={item.name} src={item.src} href={item.id} price={item.price} />
+              )
+            }
+          })
+        }
+      </div>
     </div>
   )
 }
