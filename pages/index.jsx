@@ -47,6 +47,7 @@ export default function Home() {
     <div className={styles.main}>
       <Head>
         <title>Trang chủ</title>
+        <meta property="og:image" content="https://xesuzukicantho.com/img/slide02.jpg" />
         <meta name="title" content="Suzuki Cần Thơ - Đại lý ô tô Suzuki chính hãng, giá rẻ và uy tín" />
         <meta name='revisit-after' content='1 days' />
         <meta name='city' content='Cần Thơ' />
