@@ -24,6 +24,7 @@
     max-height: 140px;
     transition: all .2s linear;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .product .price-box .price {
