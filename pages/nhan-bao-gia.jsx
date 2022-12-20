@@ -134,6 +134,7 @@ const register = () => {
     <div className="account-page register">
       <Head>
         <title>Nhận báo giá</title>
+        <meta property="og:image" content="https://xesuzukicantho.com/img/slide02.jpg" />
         <meta name="title" content="Báo giá xe Suzuki thành phố Cần Thơ hôm nay" />
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />

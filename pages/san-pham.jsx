@@ -19,6 +19,7 @@ const Product = () => {
     <div className="product-page">
       <Head>
         <title>Sản phẩm</title>
+        <meta property="og:image" content="https://xesuzukicantho.com/img/slide02.jpg" />
         <meta name="title" content="Xe Suzuki thành phố Cần Thơ" />
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import axios from './api/axios'
 import Cookie, { useCookies } from 'react-cookie'
-import {homeAPI} from "../config"
+import { homeAPI } from "../config"
 
 import { swtoast } from "../mixins/swal.mixin";
 // import useAuth from '../hooks/useAuth'
@@ -78,10 +78,11 @@ const login = () => {
         <div className="account-page login">
             <Head>
                 <title>Đăng nhập</title>
+                <meta property="og:image" content="https://xesuzukicantho.com/img/slide02.jpg" />
                 <meta name="title" content="Trang đăng nhập xe Suzuki Cần Thơ - xesuzukicantho.com" />
                 <meta name="description" content="Đăng nhập xe Suzuki Cần Thơ - xesuzukicantho.com" />
                 <meta name='revisit-after' content='1 days' />
-                <meta name='city' content='Cần Thơ'/>
+                <meta name='city' content='Cần Thơ' />
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta http-equiv="content-language" content="vi" />
             </Head>

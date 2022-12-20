@@ -36,6 +36,7 @@ const Contact = () => {
     <div className="contact">
       <Head>
         <title>Liên hệ</title>
+        <meta property="og:image" content="https://xesuzukicantho.com/img/slide02.jpg" />
         <meta name="title" content="Liên hệ đại lý Suzuki thành phố Cần Thơ" />
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Heading from '../components/Heading'
 import ProductItem from '../components/ProductItem'
 import Head from 'next/head'
-import {homeAPI} from "../config"
+import { homeAPI } from "../config"
 
 const ProductDetail = () => {
     const router = useRouter();
@@ -33,14 +33,15 @@ const ProductDetail = () => {
                             <div className='product-detail' key={index}>
                                 <Head>
                                     <title>{item.name}</title>
+                                    <meta property="og:image" content={item.src} />
                                     <meta name="title" content={item.name} />
                                     <meta name="description" content={item.description} />
                                     <meta name='robots' content='index, follow' />
                                     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                                     <meta name='revisit-after' content='1 days' />
                                     <meta http-equiv="content-language" content="vi" />
-                                    <meta name='city' content='Cần Thơ'/>
-                                    <meta name='keywords' content='Chi tiết xe Suzuki, chi tiết XL7, Ciaz, chi tiết các dòng xe suzuki'/>
+                                    <meta name='city' content='Cần Thơ' />
+                                    <meta name='keywords' content='Chi tiết xe Suzuki, chi tiết XL7, Ciaz, chi tiết các dòng xe suzuki' />
                                 </Head>
                                 <div className="product-infor d-flex flex-row flex-wrap justify-content-start">
                                     <div className="product-imgs d-flex justify-content-center">
