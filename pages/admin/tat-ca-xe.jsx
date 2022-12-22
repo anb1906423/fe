@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 import CKeditor from '../../components/CKeditor'
 import $ from 'jquery'
 const ADDPRODUCT_URL = `${homeAPI}/admin/add-product`
-import {homeAPI} from "../../config"
+import { homeAPI } from "../../config"
 
 const typeProducts = ['Xe du lịch', 'Xe tải']
 
@@ -135,18 +135,17 @@ const adminPage = () => {
           withCredentials: true
         }
       )
-      console.log(JSON.stringify(response?.data));
-      console.log(response?.data);
-      console.log(JSON.stringify(response))
-      setProducts(product => [...product, response?.data])
-      swtoast.success({
-        text: "Xe được thêm thành công!!",
-      });
       setName('')
       setPrice('')
       setDescription('')
       setSrc('')
       setErr('')
+      console.log(JSON.stringify(response?.data));
+      console.log(response?.data);
+      console.log(JSON.stringify(response))
+      swtoast.success({
+        text: "Xe được thêm thành công!!",
+      });
     } catch (err) {
       if (!err?.response) {
         setErr("No server response")
@@ -232,11 +231,11 @@ const adminPage = () => {
             <div>
               <label htmlFor="description" className="d-block w-100">Mô tả:</label>
               <CKeditor
+                Placeholder={{ placeholder: "Mô tả thông tin xe ..." }}
                 name="description"
                 id="description"
                 form="add-product-form"
                 data={description}
-                placeholder="Nhập mô tả thông tin xe..."
                 onChange={(data) => {
                   setDescription(data);
                 }}
@@ -244,7 +243,7 @@ const adminPage = () => {
               />
             </div>
             <p className="text-danger">{err}</p>
-            <div className="submit-wrapper w-100 text-center"><button type="submit" className="submit-btn">THÊM XE</button></div>
+            <div className="submit-wrapper w-100 text-center"><button onClick={(e) => handleSubmit(e)} type="submit" className="submit-btn">THÊM XE</button></div>
           </form>
         </div>
       </div>

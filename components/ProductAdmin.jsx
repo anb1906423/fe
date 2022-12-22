@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import axios from 'axios'
 import { swalert, swtoast } from "../mixins/swal.mixin";
-import {homeAPI} from "../config"
+import { homeAPI } from "../config"
+import { FaTrash, FaEdit, FaClipboardList } from "react-icons/fa"
 
 const ProductAdmin = (props) => {
     const [products, setProducts] = useState([])
@@ -58,11 +59,19 @@ const ProductAdmin = (props) => {
                         <td className="name"><p>{props.name}</p></td>
                         <td className="text-danger fw-bold"><p>{props.price}&nbsp;VNĐ</p></td>
                         <td className="createAt"><p>{createAt}</p></td>
-                        <td className="d-none d-sm-flex justify-content-around manipulation">
+                        <td className="d-none d-sm-flex justify-content-around align-items-center manipulation">
                             <Link href={propsId(props.href)}>
-                                <button className="btn btn-primary manipulation-btn">Xem</button>
+                                {/* <button className="btn btn-primary manipulation-btn">Xem</button> */}
+                                <FaClipboardList className="text-dark" />
                             </Link>
-                            <button onClick={() => deleteProduct(props.href)} className="btn btn-danger manipulation-btn">Xóa</button>
+                            <Link href={props.href}>
+                                <FaEdit className="text-dark" />
+                            </Link>
+                            {/* <Link href={propsId(props.href)}>
+                                <button className="btn btn-primary manipulation-btn">Xem</button>
+                            </Link> */}
+                            <FaTrash className="text-dark" onClick={() => deleteProduct(props.href)} />
+                            {/* <button onClick={() => deleteProduct(props.href)} className="btn btn-danger manipulation-btn">Xóa</button> */}
                         </td>
                     </tr>
                 </tbody>

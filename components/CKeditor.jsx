@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-export default function CKeditor({ onChange, editorLoaded, name, value }) {
+import { Placeholder } from "react-bootstrap";
+export default function CKeditor({ onChange, editorLoaded, name, value, Placeholder, init }) {
     const editorRef = useRef();
     const { CKEditor, ClassicEditor } = editorRef.current || {};
     useEffect(() => {
@@ -12,6 +13,8 @@ export default function CKeditor({ onChange, editorLoaded, name, value }) {
         <>
             {editorLoaded ? (
                 <CKEditor
+                    initData={init}
+                    config={Placeholder}
                     type=""
                     name={name}
                     editor={ClassicEditor}
