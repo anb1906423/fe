@@ -215,6 +215,11 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .button-group .visit-add-product-page,
+    .button-group .delete-all-product {
+        min-width: 160px;
+        margin: 0 8px;
+}
 }
 
 @media (max-width: 576px) {
