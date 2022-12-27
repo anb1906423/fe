@@ -52,7 +52,7 @@ const login = () => {
             setCookie('user', response.data)
 
             console.log(response.data);
-            window.location.assign('/')
+            window.location.assign('/admin/tat-ca-xe')
             // setAuth({ email, pwd, roles, accessToken });
             setEmail('')
             setPwd('')

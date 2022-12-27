@@ -243,7 +243,7 @@ const register = () => {
             <p className="text-danger">{err}</p>
             <p className="text-success">{success}</p>
             <button className="btn submit-btn log-up-btn w-100 text-white" type="submit">Đăng ký</button>
-            <p className="have-account text-center">Nếu bạn là admin?</p>
+            <p className="have-account text-center">Bạn là quản trị viên?</p>
             <Link href="/dang-nhap">
               <button className="btn sub-btn w-100">Đăng nhập</button>
             </Link>

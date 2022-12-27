@@ -8,13 +8,8 @@ import { homeAPI } from "../config"
 const ProductDetail = () => {
     const router = useRouter();
     const productId = router.query.id;
-
-    console.log(productId);
-    console.log(router);
     const [products, setProducts] = useState([])
     const [otherProducts, setOtherProducts] = useState([])
-    console.log(otherProducts);
-    console.log(products);
     useEffect(() => {
         fetch(`${homeAPI}/admin`)
             .then((res) => res.json())

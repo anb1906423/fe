@@ -60,17 +60,17 @@ const ProductAdmin = (props) => {
                         <td className="text-danger fw-bold"><p>{props.price}&nbsp;VNĐ</p></td>
                         <td className="createAt"><p>{createAt}</p></td>
                         <td className="d-none d-sm-flex justify-content-around align-items-center manipulation">
-                            <Link href={propsId(props.href)}>
+                            <Link title='Chi tiết xe' href={propsId(props.href)}>
                                 {/* <button className="btn btn-primary manipulation-btn">Xem</button> */}
                                 <FaClipboardList className="text-dark" />
                             </Link>
-                            <Link href={props.href}>
+                            <Link title='Cập nhật thông tin xe' href={props.href}>
                                 <FaEdit className="text-dark" />
                             </Link>
                             {/* <Link href={propsId(props.href)}>
                                 <button className="btn btn-primary manipulation-btn">Xem</button>
                             </Link> */}
-                            <FaTrash className="text-dark" onClick={() => deleteProduct(props.href)} />
+                            <FaTrash title='Xóa xe' className="text-dark" onClick={() => deleteProduct(props.href)} />
                             {/* <button onClick={() => deleteProduct(props.href)} className="btn btn-danger manipulation-btn">Xóa</button> */}
                         </td>
                     </tr>

@@ -75,6 +75,7 @@
     padding: 4px;
 }
 
+.add-price-table-group .submit-btn,
 .add-infor-product .submit-btn {
     padding: 4px 24px;
     margin: 12px;
@@ -90,12 +91,14 @@
     color: var(--black);
 }
 
-.delete-group {
+.button-group {
     margin: 16px 0;
 }
 
-.delete-group .delete-all-product {
+.button-group .visit-add-product-page,
+.button-group .delete-all-product {
     min-width: 240px;
+    margin: 0 8px;
 }
 
 .product-empty {

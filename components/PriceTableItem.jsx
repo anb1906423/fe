@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { FaTimes } from 'react-icons/fa'
+import { FaTimes, FaEdit } from 'react-icons/fa'
 import { swalert, swtoast } from "../mixins/swal.mixin";
 import { useCookies } from 'react-cookie'
-import { homeAPI } from "../config"
+import { homeAPI, feAPI } from "../config"
 
 const PriceTableItem = (props) => {
   const [priceTable, setPriceTable] = useState([])
@@ -69,8 +69,13 @@ const PriceTableItem = (props) => {
   }
   return (
     <div className="price-table-item text-center position-relative">
-      <div className="img-wrapper">
+      <div className="img-wrapper position-relative">
         <img src={props.srcCar} alt="" />
+        <div className="edit-price-table-absolute position-absolute" onClick={() => {
+          window.location.assign(feAPI + `/admin/price-table/${props.id}`)
+        }}>
+          <FaEdit className="edit-price-table-btn text-center" />
+        </div>
       </div>
       <div className="infor-price-table-group">
         <h4 className="name-car text-uppercase">{props.nameCar}</h4>

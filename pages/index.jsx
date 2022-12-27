@@ -35,7 +35,7 @@ export default function Home() {
     {
       icon: <FaPhoneSquareAlt />,
       content: 'Tư vấn trực tiếp 0918.941.966',
-      href: '/lien-he'
+      href: 'tel:0918941966'
     },
     {
       icon: <FaFacebookSquare />,
