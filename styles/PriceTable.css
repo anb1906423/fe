@@ -46,7 +46,7 @@
 }
 
 .price-table-item .img-wrapper:hover .edit-price-table-absolute {
-    display: block;
+    /* display: block; */
 }
 
 .price-table-item .name-car {
