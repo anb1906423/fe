@@ -19,7 +19,14 @@ const adminPage = () => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
-  const [src, setSrc] = useState('');
+  const [src, setSrc] = useState([]);
+ 
+  const [srcs, setSrcs] = useState(() => {
+    const storage = JSON.parse(localStorage.getItem("src"));
+    return storage ?? [];
+  });
+
+  const [imgOtherColor, setImgOtherColor] = useState([])
   var [type, setType] = useState('');
   const [newProduct, setNewProduct] = useState(true);
   const [editorLoaded, setEditorLoaded] = useState(false);
@@ -40,6 +47,33 @@ const adminPage = () => {
   useEffect(() => {
     nameRef.current.focus();
   }, [])
+
+  useEffect(() => {
+    console.log(src);
+  }, [src])
+
+  const handleAddImg = () => {
+    setSrcs((prev) => {
+      const addImg = [...prev, job];
+      updateSrcs(addImg);
+      return addImg;
+    });
+
+    setJob("");
+  };
+
+  const handleDeleteImg = (index) => {
+    setJobs((prev) => {
+      const newJobs = jobs.filter((job, i) => i !== index);
+      updateSrcs(newJobs);
+      return newJobs;
+    });
+  };
+
+  const updateSrcs = (imgList) => {
+    JSON.stringify(localStorage.setItem("src", JSON.stringify(src)));
+    return imgList;
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -163,11 +197,24 @@ const adminPage = () => {
                   type="text"
                   placeholder="Dán link ảnh"
                   ref={srcRef}
-                  value={src}
-                  onChange={(e) => setSrc(e.target.value)}
+                  // value={src}
+                  onChange={(e) => {
+                    setSrc(src => [e.target.value])
+                    // src.push(e.target.value)
+                  }}
                 />
               </div>
             </div>
+            {/* <label className="d-block" htmlFor="src">Thêm ảnh:</label>
+            <input
+              type="text"
+              value={imgOtherColor}
+              onChange={(e) => {
+                src.push(e.target.value)
+                console.log(imgOtherColor);
+                setImgOtherColor(imgOtherColor => [...imgOtherColor, e.target.value])
+              }}
+            /> */}
             <div className="line-3 d-flex w-100 flex-row flex-wrap justify-content-left">
               <div className="d-flex align-items-center">
                 <label htmlFor="type">Loại xe:</label>
@@ -203,6 +250,22 @@ const adminPage = () => {
           </form>
         </div>
       </div>
+      <input value={src} onChange={(e) => setSrc(e.target.value)} />
+      <button onClick={handleAddImg}>submit</button>
+
+      {srcs.map((src, index) => (
+        <ul key={index}>
+          <li>
+            <img src={src} />
+            <button
+              style={{ marginLeft: 20 }}
+              onClick={() => handleDeleteImg(index)}
+            >
+              x
+            </button>
+          </li>
+        </ul>
+      ))}
     </div>
   )
 }
