@@ -52,6 +52,10 @@ a {
   --height-header-content: 66px;
 }
 
+.cont {
+  margin-top: var(--height-header-content);
+}
+
 .bg-main-color {
   background-color: #1d3565;
 }

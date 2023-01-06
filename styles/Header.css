@@ -26,6 +26,11 @@
     text-align: center;
     height: var(--height-header-content);
     box-shadow: #CCCCCC 1px 6px 7px -3px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .header .menu {
@@ -38,7 +43,7 @@
 
 .bar-icon {
     display: none;
-    color: var(--white);
+    color: var(--main-color);
     font-size: 26px;
     cursor: pointer;
 }
@@ -100,10 +105,10 @@
     .logo-box {
         width: 100%;
         margin: 0px 40px;
-        background-color: var(--main-color);
+        background-color: var(--white);
     }
     .menu {
-        background-color: var(--main-color);
+        background-color: var(--white);
         flex-wrap: wrap;
     }
     .menu .menu-item {
@@ -112,7 +117,7 @@
     }
     
     .menu .menu-item a {
-        color: white;
+        color: var(--main-color);
         width: 100%;
     }
 }

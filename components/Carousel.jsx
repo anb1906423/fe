@@ -1,6 +1,11 @@
 import React from 'react'
 const slides = [
     {
+        id: 4,
+        src: "../img/slide04.jpg",
+        alt: "Slide 4",
+    },
+    {
         id: 1,
         src: "../img/slide01.jpg",
         alt: "Slide 1",
