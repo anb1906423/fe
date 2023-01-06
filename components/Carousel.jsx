@@ -1,6 +1,11 @@
 import React from 'react'
 const slides = [
     {
+        id: 4,
+        src: "https://res.cloudinary.com/daeph2mgj/image/upload/v1673020588/slideCopy_fhmdxi.jpg",
+        alt: "Slide 4",
+    },
+    {
         id: 1,
         src: "../img/slide01.jpg",
         alt: "Slide 1",
@@ -14,11 +19,6 @@ const slides = [
         id: 3,
         src: "https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/homepage-carousel-new/jcr:content/par/billboard_2132359069/imageComponent/image.imgs.full.high.jpg",
         alt: "Slide 3",
-    },
-    {
-        id: 4,
-        src: "../img/slide001.jpg",
-        alt: "Slide 4",
     },
 ]
 
