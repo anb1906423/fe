@@ -78,9 +78,9 @@ const login = () => {
         <div className="account-page login">
             <Head>
                 <title>Đăng nhập</title>
-                <meta property="og:image" content="https://xesuzukicantho.com/img/slide02.jpg" />
-                <meta name="title" content="Trang đăng nhập xe Suzuki Cần Thơ - xesuzukicantho.com" />
-                <meta name="description" content="Đăng nhập xe Suzuki Cần Thơ - xesuzukicantho.com" />
+                <meta property="og:image" content="https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/explorer-overview-carousel/jcr:content/par/billboard_1441502915/imageComponent/image.imgs.full.high.jpg" />
+                <meta name="title" content="Đăng nhập" />
+                <meta name="description" content="Trang đăng nhập dành cho admin Ford chi nhánh Cần Thơ - fordscantho.com" />
                 <meta name='revisit-after' content='1 days' />
                 <meta name='city' content='Cần Thơ' />
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

@@ -22,7 +22,7 @@ const Header = () => {
       setRoles(userCookie.roles)
     }
   })
-  
+
   useEffect(() => {
     if (isOpen === true) {
       $('.menu-item').toggleClass('d-block w-100')
@@ -34,7 +34,7 @@ const Header = () => {
       $('.opacity').addClass('d-none')
     }
   }, [isOpen])
-  
+
   useEffect(() => {
     $(".bar-icon").click(() => {
       setIsOpen(!isOpen)
@@ -43,7 +43,7 @@ const Header = () => {
       setIsOpen(!isOpen)
     })
   }, [isOpen])
-  
+
   useEffect(() => {
     setUrl(window.location.pathname)
   }, [])
@@ -80,20 +80,20 @@ const Header = () => {
         <link rel="icon" href="/logo.jpg" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossOrigin="anonymous"></link>
       </Head>
-      <div className="header-top">
-        <a href='/'>
-          <img className="logo" src="https://dailysuzukicantho.com/OTO3602200370/files/logo.png" alt="" />
-        </a>
-      </div>
       <div className="header-content">
-        <div className="menu position-relative">
+        <div className="menu position-relative d-flex">
+          <div className="logo-box">
+            <a href='/'>
+              <img className="logo" src="https://www.ford.com.vn/content/dam/Ford/website-assets/ap/vn/home/New%20Logo.png" alt="" />
+            </a>
+          </div>
           <span className='bar-icon position-absolute'>
             <FaBars />
           </span>
           {
             menu.map((item, index) => {
               if (item.href == url) {
-                return <div className="menu-item" key={index}><a className="text-danger" href={item.href}>{item.name}</a></div>
+                return <div className="menu-item" key={index}><a className="" href={item.href}>{item.name}</a></div>
               } if ((index === 4 && roles == 1) || (index === 4 && roles == 0)) {
                 return <div className="menu-item" key={index}><a href="/profile">Profile</a></div>
               } if (index === 5 && roles !== 1) {

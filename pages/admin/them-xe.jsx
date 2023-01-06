@@ -10,7 +10,7 @@ import CKeditor from '../../components/CKeditor'
 const ADDPRODUCT_URL = `${homeAPI}/admin/add-product`
 import { homeAPI } from "../../config"
 
-const typeProducts = ['Xe du lịch', 'Xe tải']
+const typeProducts = ['Xe du lịch', 'Xe thương mại']
 
 const adminPage = () => {
   const nameRef = useRef();
@@ -21,10 +21,7 @@ const adminPage = () => {
   const [description, setDescription] = useState('');
   const [src, setSrc] = useState([]);
  
-  const [srcs, setSrcs] = useState(() => {
-    const storage = JSON.parse(localStorage.getItem("src"));
-    return storage ?? [];
-  });
+  const [srcs, setSrcs] = useState([]);
 
   const [imgOtherColor, setImgOtherColor] = useState([])
   var [type, setType] = useState('');
@@ -250,10 +247,10 @@ const adminPage = () => {
           </form>
         </div>
       </div>
-      <input value={src} onChange={(e) => setSrc(e.target.value)} />
-      <button onClick={handleAddImg}>submit</button>
+      {/* <input value={src} onChange={(e) => setSrc(e.target.value)} />
+      <button onClick={handleAddImg}>submit</button> */}
 
-      {srcs.map((src, index) => (
+      {/* {srcs.map((src, index) => (
         <ul key={index}>
           <li>
             <img src={src} />
@@ -265,7 +262,7 @@ const adminPage = () => {
             </button>
           </li>
         </ul>
-      ))}
+      ))} */}
     </div>
   )
 }

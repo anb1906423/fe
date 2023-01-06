@@ -13,7 +13,7 @@ import Link from 'next/link'
 const ADDPRODUCT_URL = `${homeAPI}/admin/add-product`
 import { homeAPI } from "../../config"
 
-const typeProducts = ['Xe du lịch', 'Xe tải']
+const typeProducts = ['Xe du lịch', 'Xe thương mại']
 
 const adminPage = () => {
 

@@ -1,23 +1,18 @@
 import React from 'react'
 const slides = [
     {
-        id: 0,
-        src: "https://dailysuzukicantho.com/OTO3602200370/files/banner/hybrid_ertiga_hp.webp",
-        alt: "Slide 1",
-    },
-    {
         id: 1,
-        src: "./img/slide02.jpg",
+        src: "../img/slide01.jpg",
         alt: "Slide 2",
     },
     {
         id: 2,
-        src: "./img/slide01.jpg",
+        src: "../img/slide02.jpg",
         alt: "Slide 3",
     },
     {
         id: 3,
-        src: "./img/slide03.jpg",
+        src: "../img/slide03.webp",
         alt: "Slide 4",
     },
 ]

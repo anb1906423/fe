@@ -7,11 +7,11 @@ import {
 import $ from 'jquery'
 const footerItems = [
   {
-    heading: 'Suzuki Cần Thơ',
+    heading: 'Đại lý ủy quyền của Ford tại Cần Thơ',
     children: [
       {
         icon: <FaMapMarkerAlt />,
-        content: 'Số 8A, Võ Nguyên Giáp, Quận Cái Răng, TP.Cần Thơ',
+        content: 'Lô 11C, Võ Nguyên Giáp, Quận Cái Răng, TP.Cần Thơ',
       },
       {
         icon: <FaPhoneSquareAlt />,
@@ -23,7 +23,7 @@ const footerItems = [
       },
       {
         icon: <FaCopyright />,
-        content: '2022 XesuzukiCanTho.com',
+        content: '2022 fordscantho.com',
       },
     ]
   },

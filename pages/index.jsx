@@ -47,14 +47,14 @@ export default function Home() {
     <div className={styles.main}>
       <Head>
         <title>Trang chủ</title>
-        <meta property="og:image" content="https://xesuzukicantho.com/img/slide02.jpg" />
-        <meta name="title" content="Suzuki Cần Thơ - Đại lý ô tô Suzuki chính hãng, giá rẻ và uy tín" />
+        <meta property="og:image" content="https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/explorer-overview-carousel/jcr:content/par/billboard_1441502915/imageComponent/image.imgs.full.high.jpg" />
+        <meta name="title" content="Ford Cần Thơ - Đại lý ủy quyền chính thức của Ford tại Việt Nam" />
         <meta name='revisit-after' content='1 days' />
         <meta name='city' content='Cần Thơ' />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="content-language" content="vi" />
-        <meta name='keywords' content='xe Suzuki, suzuki cần thơ, suzuki tây đô, xesuzukicantho.com, xe suzuki cần thơ' />
-        <meta name="description" content="Website trưng bày, tham khảo, chi tiết thông số cũng như giá bán các dòng xe Suzuki chính hãng. Tư vấn tận tình, giá cả hợp lý, đáng tin cậy, được nhiều khách hàng tin tưởng lựa chọn." />
+        <meta name='keywords' content='Sản phẩm nổi bật của ford, ford territory, ô tô ford, cam kết khi mua xe tại ford - cần thơ, xe chính hãng, ford cần thơ' />
+        <meta name="description" content="Trang chủ - Website trưng bày, tham khảo, chi tiết thông số cũng như giá bán các dòng xe Ford chính hãng. Tư vấn tận tình, giá cả hợp lý, đáng tin cậy, tự hào được nhiều khách hàng tin tưởng lựa chọn." />
       </Head>
       <div className={styles.container}>
         <Carousel />
@@ -83,11 +83,11 @@ export default function Home() {
         </div>
 
         <div className="undertake-wrapper position-relative">
-          <Heading title="Cam kết khi mua xe tại Suzuki Tây Đô - Cần Thơ" />
+          <Heading title="Cam kết khi mua xe tại Ford - Cần Thơ" />
           <div className="undertake-box d-flex flex-wrap justify-content-around">
-            <UndertakeItem icon={<FaMoneyCheckAlt className="icon-item-undertake" />} title="Thanh toán và nhận xe nhanh chóng" des="Suzuki Cần Thơ luôn cam kết mang lại mức giá ưu đãi nhất cho quý khách với thời gian giao xe nhanh nhất" />
-            <UndertakeItem icon={<FaCalendarCheck className="icon-item-undertake" />} title="Cung cấp các dòng xe chính hãng" des="Suzuki Cần Thơ luôn cung cấp các dòng xe chính hãng được sản xuất tại Việt Nam và nhập khẩu với các tiêu chuẩn toàn cầu" />
-            <UndertakeItem icon={<FaHandshake className="icon-item-undertake" />} title="Dịch vụ bảo hành, bảo dưỡng hàng đầu" des="Suzuki Cần Thơ luôn cam kết chăm sóc kỹ lưỡng và chế độ hậu mãi tốt nhất cho Quý Khách khi mua xe ô tô tại đây" />
+            <UndertakeItem icon={<FaMoneyCheckAlt className="icon-item-undertake" />} title="Thanh toán và nhận xe nhanh chóng" des="Ford Cần Thơ luôn cam kết mang lại mức giá ưu đãi nhất cho quý khách với thời gian giao xe nhanh nhất" />
+            <UndertakeItem icon={<FaCalendarCheck className="icon-item-undertake" />} title="Cung cấp các dòng xe chính hãng" des="Ford Cần Thơ luôn cung cấp các dòng xe chính hãng được sản xuất tại Việt Nam và nhập khẩu với các tiêu chuẩn toàn cầu" />
+            <UndertakeItem icon={<FaHandshake className="icon-item-undertake" />} title="Dịch vụ bảo hành, bảo dưỡng hàng đầu" des="Ford Cần Thơ luôn cam kết chăm sóc kỹ lưỡng và chế độ hậu mãi tốt nhất cho Quý Khách khi mua xe ô tô tại đây" />
           </div>
         </div>
       </div>

@@ -47,9 +47,9 @@ a {
 :root {
   --white: #fff;
   --black: #000;
-  --main-color: #1d3565;
+  --main-color: #00095b;
   --height-header-top: 60px;
-  --height-header-content: 50px;
+  --height-header-content: 66px;
 }
 
 .bg-main-color {

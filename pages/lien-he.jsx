@@ -13,7 +13,7 @@ const Contact = () => {
   const contactInfor = [
     {
       icon: <FaMapMarkerAlt />,
-      content: 'Số 8A, Võ Nguyên Giáp, Quận Cái Răng, TP.Cần Thơ',
+      content: 'Lô 11C, Võ Nguyên Giáp, Quận Cái Răng, TP.Cần Thơ',
       href: '#'
     },
     {
@@ -28,7 +28,7 @@ const Contact = () => {
     },
     {
       icon: <FaFirefox />,
-      content: 'xesuzukicantho.com',
+      content: 'fordscantho.com',
       href: '#'
     },
   ]
@@ -36,14 +36,14 @@ const Contact = () => {
     <div className="contact">
       <Head>
         <title>Liên hệ</title>
-        <meta property="og:image" content="https://xesuzukicantho.com/img/slide02.jpg" />
-        <meta name="title" content="Liên hệ đại lý Suzuki thành phố Cần Thơ" />
+        <meta property="og:image" content="https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/explorer-overview-carousel/jcr:content/par/billboard_1441502915/imageComponent/image.imgs.full.high.jpg" />
+        <meta name="title" content="Liên hệ đại lý ô tô Ford thành phố Cần Thơ" />
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />
         <meta name='city' content='Cần Thơ'/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name='keywords' content='tư vấn xe Suzuki, liên hệ suzuki cần thơ, tổng đài tư vấn xu suzuki cần thơ, số điện thoại suzuki cần thơ'/>
-        <meta name="description" content="Liên hệ để được tư vấn hoặc cần giải đáp thắc mắc: 0918.941.966 Mr. Tâm hoặc Facebook Nguyễn Văn Tâm."/>
+        <meta name='keywords' content='fordscantho.com, ford cần thơ, liên hệ ford cần thơ, đại lý ford, ô tô ford'/>
+        <meta name="description" content="Liên hệ nhận báo giá và tư vấn"/>
       </Head>
       <Heading title="Liên hệ" />
       <div className="contact-content d-flex w-100 flex-row flex-wrap justify-content-around">

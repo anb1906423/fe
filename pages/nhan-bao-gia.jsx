@@ -112,7 +112,7 @@ const register = () => {
       setEmail('')
       setPwd('')
       setModel('')
-      setSuccess("Suzuki Tây Đô - Cần Thơ đã tiếp nhận thông tin của quý khách!")
+      setSuccess("Chúng tôi đã nhận được yêu cầu báo giá của quý khách!")
     } catch (err) {
       if (!err?.response) {
         setErr('No Server Response!')
@@ -134,14 +134,14 @@ const register = () => {
     <div className="account-page register">
       <Head>
         <title>Nhận báo giá</title>
-        <meta property="og:image" content="https://xesuzukicantho.com/img/slide02.jpg" />
-        <meta name="title" content="Báo giá xe Suzuki thành phố Cần Thơ hôm nay" />
+        <meta property="og:image" content="https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/explorer-overview-carousel/jcr:content/par/billboard_1441502915/imageComponent/image.imgs.full.high.jpg" />
+        <meta name="title" content="Giá ô tô ford thành phố Cần Thơ hôm nay" />
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name='city' content='Cần Thơ' />
-        <meta name='keywords' content='giá xe suzuki, giá XL7, giá Ciaz, bảng giá xe suzuki, suzuki cần thơ giá rẻ' />
-        <meta name="description" content="Đăng ký để nhận báo giá xe Suzuki Cần Thơ hôm nay nhanh, chính xác và ưu đãi nhất." />
+        <meta name='keywords' content='giá xe ford, giá ô tô ford cần thơ, giá territory, ô tô ford, ford cần thơ' />
+        <meta name="description" content="Nhận báo giá ô tô Ford chi nhánh Cần Thơ nhanh, chính xác và ưu đãi nhất." />
       </Head>
       <Heading title="Đăng ký nhận báo giá" />
       <div className="register-wrapper">
