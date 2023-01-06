@@ -12,7 +12,7 @@ const slides = [
     },
     {
         id: 3,
-        src: "../img/slide03.webp",
+        src: "https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/homepage-carousel-new/jcr:content/par/billboard_2132359069/imageComponent/image.imgs.full.high.jpg",
         alt: "Slide 3",
     },
 ]
