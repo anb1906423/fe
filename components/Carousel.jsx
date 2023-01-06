@@ -2,7 +2,7 @@ import React from 'react'
 const slides = [
     {
         id: 4,
-        src: "../img/slide.jpg",
+        src: "../img/slide001.jpg",
         alt: "Slide 4",
     },
     {
