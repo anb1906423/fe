@@ -226,9 +226,9 @@ const register = () => {
                 <label type="" htmlFor="installment">Trả góp</label>
               </div>
             </div>
-            <label htmlFor="pwd" className="">Mật khẩu:</label>
+            <label htmlFor="pwd" className=" d-none">Mật khẩu:</label>
             <input
-              className="w-100"
+              className="w-100 d-none"
               type="password"
               name="pwd"
               id="pwd"
