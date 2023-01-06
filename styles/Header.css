@@ -119,12 +119,12 @@
 
 /* Mobile */
 @media (max-width: 576px) {
-    .header-top {
+    /* .header-top {
         height: 48px;
-    }
-    .header-content {
+    } */
+    /* .header-content {
         height: 44px;
-    }
+    } */
     .carousel-indicators button {
         max-width: 16px;
         max-height: 2px;
