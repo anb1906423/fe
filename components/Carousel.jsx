@@ -3,17 +3,17 @@ const slides = [
     {
         id: 1,
         src: "../img/slide01.jpg",
-        alt: "Slide 2",
+        alt: "Slide 1",
     },
     {
         id: 2,
         src: "../img/slide02.jpg",
-        alt: "Slide 3",
+        alt: "Slide 2",
     },
     {
         id: 3,
         src: "../img/slide03.webp",
-        alt: "Slide 4",
+        alt: "Slide 3",
     },
 ]
 
