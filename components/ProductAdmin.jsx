@@ -10,6 +10,12 @@ const ProductAdmin = (props) => {
     const time = new Date(props.created)
     const createAt = time.toLocaleDateString()
 
+    const makeNewPrice = (price) => {
+        if(price.includes('0')) {
+            return price + ' VNĐ'
+        } return price
+    }
+
     const deleteProduct = async (id) => {
         const body = {
             id: id,
@@ -57,7 +63,7 @@ const ProductAdmin = (props) => {
                     <tr className="w-100 d-flex align-items-center justify-content-between">
                         <td className=""><img src={props.src} alt={props.name} /></td>
                         <td className="name"><p>{props.name}</p></td>
-                        <td className="text-danger fw-bold"><p>{props.price}&nbsp;VNĐ</p></td>
+                        <td className="text-danger fw-bold"><p>{makeNewPrice(props.price)}</p></td>
                         <td className="createAt"><p>{createAt}</p></td>
                         <td className="d-none d-sm-flex justify-content-around align-items-center manipulation">
                             <Link title='Chi tiết xe' href={propsId(props.href)}>

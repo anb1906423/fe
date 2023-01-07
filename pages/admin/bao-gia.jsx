@@ -148,7 +148,7 @@ const inforCustomer = () => {
                 <tbody className="w-100 text-center">
                     <tr className="fs-6 w-100">
                         <th className="">Tổng cộng:</th>
-                        <th className="">{users.length - 1}</th>
+                        <th className="">{users.length - 2}</th>
                     </tr>
                 </tbody>
             </table>

@@ -9,7 +9,7 @@ const HeaderAdmin = () => {
     },
     {
       name: 'Báo giá',
-      href: '/admin/tu-van',
+      href: '/admin/bao-gia',
     },
     {
       name: 'Quản lý bảng giá',
