@@ -35,14 +35,14 @@ const Contact = () => {
   return (
     <div className="contact">
       <Head>
-        <title>Liên hệ</title>
+        <title>Đại lý ủy quyền chính thức của Ford tại Cần Thơ</title>
         <meta property="og:image" content="https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/explorer-overview-carousel/jcr:content/par/billboard_1441502915/imageComponent/image.imgs.full.high.jpg" />
         <meta name="title" content="Liên hệ đại lý ô tô Ford thành phố Cần Thơ" />
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />
         <meta name='city' content='Cần Thơ'/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name='keywords' content='fordscantho.com, ford cần thơ, liên hệ ford cần thơ, đại lý ford, ô tô ford'/>
+        <meta name='keywords' content='ford ranger xls, fordscantho.com, ford cần thơ, liên hệ ford cần thơ, đại lý ford, ô tô ford'/>
         <meta name="description" content="Liên hệ nhận báo giá và tư vấn"/>
       </Head>
       <Heading title="Liên hệ" />

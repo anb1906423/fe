@@ -46,14 +46,14 @@ export default function Home() {
   return (
     <div className={styles.main}>
       <Head>
-        <title>Trang chủ</title>
+        <title>Đại lý ủy quyền chính thức của Ford tại Cần Thơ</title>
         <meta property="og:image" content="https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/explorer-overview-carousel/jcr:content/par/billboard_1441502915/imageComponent/image.imgs.full.high.jpg" />
         <meta name="title" content="Ford Cần Thơ - Đại lý ủy quyền chính thức của Ford tại Việt Nam" />
         <meta name='revisit-after' content='1 days' />
         <meta name='city' content='Cần Thơ' />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="content-language" content="vi" />
-        <meta name='keywords' content='Sản phẩm nổi bật của ford, ford territory, ô tô ford, cam kết khi mua xe tại ford - cần thơ, xe chính hãng, ford cần thơ' />
+        <meta name='keywords' content='ford ranger xls, Sản phẩm nổi bật của ford, ford territory, ô tô ford, cam kết khi mua xe tại ford - cần thơ, xe chính hãng, ford cần thơ' />
         <meta name="description" content="Trang chủ - Website trưng bày, tham khảo, chi tiết thông số cũng như giá bán các dòng xe Ford chính hãng. Tư vấn tận tình, giá cả hợp lý, đáng tin cậy, tự hào được nhiều khách hàng tin tưởng lựa chọn." />
       </Head>
       <div className={styles.container}>

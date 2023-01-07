@@ -66,7 +66,7 @@ const profile = () => {
   return (
     <div className='account-page profile-container'>
       <Head>
-        <title>Profile</title>
+        <title>Đại lý ủy quyền chính thức của Ford tại Cần Thơ</title>
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />
         <meta name='city' content='Cần Thơ' />

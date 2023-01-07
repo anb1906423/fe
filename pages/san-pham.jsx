@@ -18,13 +18,13 @@ const Product = () => {
   return (
     <div className="product-page">
       <Head>
-        <title>Sản phẩm</title>
+        <title>Đại lý ủy quyền chính thức của Ford tại Cần Thơ</title>
         <meta property="og:image" content="https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/explorer-overview-carousel/jcr:content/par/billboard_1441502915/imageComponent/image.imgs.full.high.jpg" />
         <meta name="title" content="Đại lý ủy quyền chính thức của Ford tại Việt Nam" />
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />
         <meta name='city' content='Cần Thơ' />
-        <meta name='keywords' content='ô tô ford, ford territory, ford ranger, xe thương mại ford, xe du lịch ford, sản phẩm ô tô ford cần thơ'/>
+        <meta name='keywords' content='ford ranger xls, ô tô ford, ford territory, ford ranger, xe thương mại ford, xe du lịch ford, sản phẩm ô tô ford cần thơ'/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name='description' content="Trang trưng bày, chi tiết thông số cũng như giá bán các dòng xe Ford chính hãng. Tư vấn tận tình, giá cả hợp lý, đáng tin cậy, tự hào được nhiều khách hàng tin tưởng lựa chọn. - Chi nhánh ủy quyền chính thức của Ford tại Cần Thơ" />
       </Head>

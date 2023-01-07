@@ -133,14 +133,14 @@ const register = () => {
   return (
     <div className="account-page register">
       <Head>
-        <title>Nhận báo giá</title>
+        <title>Đại lý ủy quyền chính thức của Ford tại Cần Thơ</title>
         <meta property="og:image" content="https://www.ford.com.vn/content/ford/vn/vi_vn/site-wide-content/billboard-carousels/explorer-overview-carousel/jcr:content/par/billboard_1441502915/imageComponent/image.imgs.full.high.jpg" />
         <meta name="title" content="Giá ô tô ford thành phố Cần Thơ hôm nay" />
         <meta name='revisit-after' content='1 days' />
         <meta http-equiv="content-language" content="vi" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name='city' content='Cần Thơ' />
-        <meta name='keywords' content='giá xe ford, giá ô tô ford cần thơ, giá territory, ô tô ford, ford cần thơ' />
+        <meta name='keywords' content='ford ranger xls, giá xe ford, giá ô tô ford cần thơ, giá territory, ô tô ford, ford cần thơ' />
         <meta name="description" content="Nhận báo giá ô tô Ford chi nhánh Cần Thơ nhanh, chính xác và ưu đãi nhất." />
       </Head>
       <Heading title="Đăng ký nhận báo giá" />
