@@ -8,12 +8,11 @@ import Head from 'next/head'
 import AccessItem from '../components/AccessItem'
 import { FaCarAlt, FaCommentDollar, FaPhoneSquareAlt, FaFacebookSquare, FaMoneyCheckAlt, FaCalendarCheck, FaHandshake } from 'react-icons/fa'
 import { homeAPI } from "../config"
-import axios from 'axios'
 
 export async function getServerSideProps(context) {
   // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
-  const res = await axios.get(homeAPI + '/admin');
-  const products = await res.data();
+  const res = await fetch(homeAPI + '/admin');
+  const products = await res.json();
 
   // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
   return {
