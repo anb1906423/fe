@@ -4,17 +4,21 @@ import PriceTableItem from '../components/PriceTableItem'
 import Head from 'next/head'
 import {homeAPI} from "../config"
 
-const PriceTable = () => {
-  const [priceTable, setPriceTable] = useState([])
-  const [roles, setRoles] = useState(0)
+export async function getServerSideProps(context) {
+  // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
+  const res = await fetch(`${homeAPI}/admin/find-all-price-table`);
+  const priceTable = await res.json();
 
-  useEffect(() => {
-    fetch(`${homeAPI}/admin/find-all-price-table`)
-      .then((res) => res.json())
-      .then((priceTable) => {
-        setPriceTable(priceTable)
-      })
-  }, [])
+  // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
+  return {
+    props: {
+      priceTable: priceTable,
+    },
+  }
+}
+
+const PriceTable = (priceTable) => {
+  
   return (
     <div className="price-table-group">
       <Head>
@@ -30,8 +34,8 @@ const PriceTable = () => {
       </Head>
       <Heading title="Bảng giá" />
       <div className="">
-        {priceTable?.length ? (
-          priceTable.map((item, index) => {
+        {priceTable.priceTable?.length ? (
+          priceTable.priceTable.map((item, index) => {
             return (
               <PriceTableItem
                 key={index}

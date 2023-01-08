@@ -9,18 +9,20 @@ import AccessItem from '../components/AccessItem'
 import { FaCarAlt, FaCommentDollar, FaPhoneSquareAlt, FaFacebookSquare, FaMoneyCheckAlt, FaCalendarCheck, FaHandshake } from 'react-icons/fa'
 import { homeAPI } from "../config"
 
+export async function getServerSideProps(context) {
+  // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
+  const res = await fetch(homeAPI + '/admin');
+  const products = await res.json();
 
-export default function Home() {
-  const [products, setProducts] = useState([])
-  useEffect(() => {
-    fetch(homeAPI + '/admin')
-      .then((res) => res.json())
-      .then((products) => {
-        setProducts(products)
-        console.log(products);
-      })
-  }, [])
+  // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
+  return {
+    props: {
+      products: products,
+    },
+  }
+}
 
+export default function Home(products) {
   const listAccess = [
     {
       icon: <FaCarAlt />,
@@ -71,7 +73,7 @@ export default function Home() {
           <Heading title="Sản phẩm nổi bật" />
           <div className="product-container d-flex flex-row flex-wrap justify-content-start">
             {
-              products.map((item, index) => {
+              products.products.map((item, index) => {
                 if (index < 4) {
                   return (
                     <ProductItem className="" key={index} name={item.name} src={item.src} href={item.id} price={item.price} />
@@ -79,6 +81,7 @@ export default function Home() {
                 }
               })
             }
+
           </div>
         </div>
 
@@ -91,7 +94,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
     </div>
   )
 }

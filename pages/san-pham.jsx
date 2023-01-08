@@ -4,17 +4,20 @@ import Heading from '../components/Heading'
 import Head from 'next/head'
 import {homeAPI} from "../config"
 
-const Product = () => {
-  const [products, setProducts] = useState([])
+export async function getServerSideProps(context) {
+  // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
+  const res = await fetch(homeAPI + '/admin');
+  const products = await res.json();
 
-  useEffect(() => {
-    fetch(`${homeAPI}/admin`)
-      .then((res) => res.json())
-      .then((products) => {
-        setProducts(products)
-      })
-  }, [])
+  // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
+  return {
+      props: {
+          products: products,
+      },
+  }
+}
 
+const Product = (products) => {
   return (
     <div className="product-page">
       <Head>
@@ -31,7 +34,7 @@ const Product = () => {
       <Heading title="Xe du lịch" />
       <div className="product-container d-flex flex-row flex-wrap justify-content-start">
         {
-          products.map((item, index) => {
+          products.products.map((item, index) => {
             if (item.type === 'Xe du lịch' && item.newProduct) {
               return (
                 <ProductItem className="" key={index} name={item.name} src={item.src} href={item.id} price={item.price} />
@@ -44,7 +47,7 @@ const Product = () => {
       <Heading title="Xe thương mại" />
       <div className="product-container d-flex flex-row flex-wrap justify-content-start ">
         {
-          products.map((item, index) => {
+          products.products.map((item, index) => {
             if (item.type === 'Xe thương mại' && item.newProduct) {
               return (
                 <ProductItem className="" key={index} name={item.name} src={item.src} href={item.id} price={item.price} />

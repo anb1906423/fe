@@ -5,24 +5,31 @@ import ProductItem from '../components/ProductItem'
 import Head from 'next/head'
 import { homeAPI } from "../config"
 
-const ProductDetail = () => {
+export async function getServerSideProps(context) {
+    // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
+    const res = await fetch(homeAPI + '/admin');
+    const products = await res.json();
+
+    // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
+    return {
+        props: {
+            products: products,
+        },
+    }
+}
+
+const ProductDetail = (products) => {
     const router = useRouter();
     const productId = router.query.id;
-    const [products, setProducts] = useState([])
     const [otherProducts, setOtherProducts] = useState([])
     useEffect(() => {
-        fetch(`${homeAPI}/admin`)
-            .then((res) => res.json())
-            .then((products) => {
-                setProducts(products)
-                setOtherProducts(products.sort(() => Math.random() - Math.random()))
-            })
-    }, [])
+        setOtherProducts(products.products.sort(() => Math.random() - Math.random()))
+    }, [products])
 
     return (
         <div className='product-detail-wrapper'>
             {
-                products.map((item, index) => {
+                products.products.map((item, index) => {
                     if (item.id === productId) {
                         return (
                             <div className='product-detail' key={index}>
@@ -62,7 +69,7 @@ const ProductDetail = () => {
             <div className="other-products w-100 d-flex flex-row flex-wrap align-items-center justify-content-around">
                 {
                     otherProducts.map((item, index) => {
-                        if (index <= 2) {
+                        if (index <= 2 && item.id !== productId) {
                             return (
                                 <ProductItem className="" key={index} name={item.name} src={item.src} href={item.id} price={item.price} />
                             )
