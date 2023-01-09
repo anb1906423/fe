@@ -4,18 +4,18 @@ import Heading from '../components/Heading'
 import Head from 'next/head'
 import {homeAPI} from "../config"
 
-export async function getServerSideProps(context) {
-  // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
-  const res = await fetch(homeAPI + '/admin');
-  const products = await res.json();
+// export async function getServerSideProps(context) {
+//   // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
+//   const res = await fetch(homeAPI + '/admin');
+//   const products = await res.json();
 
-  // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
-  return {
-      props: {
-          products: products,
-      },
-  }
-}
+//   // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
+//   return {
+//       props: {
+//           products: products,
+//       },
+//   }
+// }
 
 const Product = (products) => {
   const [cars, setCars] = useState([])
