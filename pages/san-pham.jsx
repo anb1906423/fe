@@ -18,6 +18,14 @@ export async function getServerSideProps(context) {
 }
 
 const Product = (products) => {
+  const [cars, setCars] = useState([])
+  useEffect(() => {
+    fetch(homeAPI + '/admin')
+      .then((res) => res.json())
+      .then((cars) => {
+        setCars(cars)
+      })
+  }, [])
   return (
     <div className="product-page">
       <Head>
@@ -34,7 +42,7 @@ const Product = (products) => {
       <Heading title="Xe du lịch" />
       <div className="product-container d-flex flex-row flex-wrap justify-content-start">
         {
-          products.products.map((item, index) => {
+          cars.map((item, index) => {
             if (item.type === 'Xe du lịch' && item.newProduct) {
               return (
                 <ProductItem className="" key={index} name={item.name} src={item.src} href={item.id} price={item.price} />
@@ -47,7 +55,7 @@ const Product = (products) => {
       <Heading title="Xe thương mại" />
       <div className="product-container d-flex flex-row flex-wrap justify-content-start ">
         {
-          products.products.map((item, index) => {
+          cars.map((item, index) => {
             if (item.type === 'Xe thương mại' && item.newProduct) {
               return (
                 <ProductItem className="" key={index} name={item.name} src={item.src} href={item.id} price={item.price} />
