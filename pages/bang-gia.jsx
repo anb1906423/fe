@@ -9,6 +9,8 @@ export async function getServerSideProps(context) {
   try {
     const res = await fetch(`${homeAPI}/admin/find-all-price-table`);
     const priceTable = await res.json();
+    console.log(res);
+    console.log(priceTable);
 
     // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
     return {
