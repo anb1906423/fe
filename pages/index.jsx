@@ -23,6 +23,14 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home(products) {
+  const [cars, setCars] = useState([])
+  useEffect(() => {
+    fetch(homeAPI + '/admin')
+      .then((res) => res.json())
+      .then((cars) => {
+        setCars(cars)
+      })
+  }, [])
   const listAccess = [
     {
       icon: <FaCarAlt />,
@@ -73,7 +81,7 @@ export default function Home(products) {
           <Heading title="Sản phẩm nổi bật" />
           <div className="product-container d-flex flex-row flex-wrap justify-content-start">
             {
-              products.products.map((item, index) => {
+              cars.map((item, index) => {
                 if (index < 4) {
                   return (
                     <ProductItem className="" key={index} name={item.name} src={item.src} href={item.id} price={item.price} />
