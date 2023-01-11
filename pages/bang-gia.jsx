@@ -4,31 +4,39 @@ import PriceTableItem from '../components/PriceTableItem'
 import Head from 'next/head'
 import { homeAPI } from "../config"
 
-export async function getServerSideProps(context) {
-  // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
-  try {
-    const res = await fetch(`${homeAPI}/admin/find-all-price-table`);
-    const priceTable = await res.json();
-    console.log(res);
-    console.log(priceTable);
+// export async function getServerSideProps(context) {
+//   // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
+//   try {
+//     const res = await fetch(`${homeAPI}/admin/find-all-price-table`);
+//     const priceTable = await res.json();
+//     console.log(res);
+//     console.log(priceTable);
 
-    // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
-    return {
-      props: {
-        priceTable: priceTable,
-      },
-    }
-  } catch (error) {
-    console.log(error);
-    return {
-      props: {
-        priceTable: [],
-      },
-    }
-  }
-}
+//     // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
+//     return {
+//       props: {
+//         priceTable: priceTable,
+//       },
+//     }
+//   } catch (error) {
+//     console.log(error);
+//     return {
+//       props: {
+//         priceTable: [],
+//       },
+//     }
+//   }
+// }
 
-const PriceTable = (priceTable) => {
+const PriceTable = () => {
+  const [priceTable, setPriceTable] = useState([])
+  useEffect(() => {
+    fetch(`${homeAPI}/admin/find-all-price-table`)
+      .then((res) => res.json())
+      .then((priceTable) => {
+        setPriceTable(priceTable)
+      })
+  }, [])
 
   return (
     <div className="price-table-group">
@@ -45,8 +53,8 @@ const PriceTable = (priceTable) => {
       </Head>
       <Heading title="Bảng giá" />
       <div className="">
-        {priceTable.priceTable?.length ? (
-          priceTable.priceTable.map((item, index) => {
+        {priceTable.length ? (
+          priceTable.map((item, index) => {
             return (
               <PriceTableItem
                 key={index}

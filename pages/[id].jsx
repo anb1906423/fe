@@ -5,31 +5,39 @@ import ProductItem from '../components/ProductItem'
 import Head from 'next/head'
 import { homeAPI } from "../config"
 
-export async function getServerSideProps(context) {
-    // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
-    const res = await fetch(homeAPI + '/admin');
-    const products = await res.json();
+// export async function getServerSideProps(context) {
+//     // Lấy dữ liệu của sản phẩm từ API hoặc từ một nguồn dữ liệu khác
+//     const res = await fetch(homeAPI + '/admin');
+//     const products = await res.json();
+//     console.log(homeAPI);
+//     console.log(res);
 
-    // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
-    return {
-        props: {
-            products: products,
-        },
-    }
-}
+//     // Trả về dữ liệu của sản phẩm dưới dạng props cho trang
+//     return {
+//         props: {
+//             products: products,
+//         },
+//     }
+// }
 
 const ProductDetail = (products) => {
     const router = useRouter();
     const productId = router.query.id;
+    const [cars, setCars] = useState([])
     const [otherProducts, setOtherProducts] = useState([])
     useEffect(() => {
-        setOtherProducts(products.products.sort(() => Math.random() - Math.random()))
-    }, [products])
+        fetch(homeAPI + '/admin')
+            .then((res) => res.json())
+            .then((cars) => {
+                setCars(cars)
+                setOtherProducts(cars.sort(() => Math.random() - Math.random()))
+            })
+    }, [])
 
     return (
         <div className='product-detail-wrapper'>
             {
-                products.products.map((item, index) => {
+                cars.map((item, index) => {
                     if (item.id === productId) {
                         return (
                             <div className='product-detail' key={index}>
@@ -56,7 +64,7 @@ const ProductDetail = (products) => {
                                             <div className="price-group d-flex justify-content-between">
                                                 <b>Giá bán:</b><h4 className="text-danger">{item.price}&nbsp;VNĐ</h4>
                                             </div>
-                                            <p dangerouslySetInnerHTML={{ __html: item.description }}></p>
+                                            {/* <p dangerouslySetInnerHTML={{ __html: item.description }}></p> */}
                                         </div>
                                     </div>
                                 </div>

@@ -6,7 +6,11 @@ import UndertakeItem from '../components/UndertakeItem'
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import AccessItem from '../components/AccessItem'
-import { FaCarAlt, FaCommentDollar, FaPhoneSquareAlt, FaFacebookSquare, FaMoneyCheckAlt, FaCalendarCheck, FaHandshake } from 'react-icons/fa'
+import CounterItem from '../components/CounterItem'
+import {
+  FaCarAlt, FaCommentDollar, FaPhoneSquareAlt, FaFacebookSquare, FaMoneyCheckAlt, FaCalendarCheck, FaHandshake,
+  FaChartLine, FaCar, FaUserCheck, FaUsers
+} from 'react-icons/fa'
 import { homeAPI } from "../config"
 
 // export async function getServerSideProps(context) {
@@ -53,6 +57,28 @@ export default function Home(products) {
       href: 'https://www.facebook.com/profile.php?id=100047842143889'
     },
   ]
+  const countList = [
+    {
+      icon: <FaChartLine />,
+      value: '17+',
+      text: 'Năm hoạt động'
+    },
+    {
+      icon: <FaUserCheck />,
+      value: '150+',
+      text: 'Nhân viên'
+    },
+    {
+      icon: <FaCar />,
+      value: '2500+',
+      text: 'Xe đã bán'
+    },
+    {
+      icon: <FaUsers />,
+      value: '98%',
+      text: 'KH hài lòng'
+    },
+  ]
   return (
     <div className={styles.main}>
       <Head>
@@ -76,6 +102,18 @@ export default function Home(products) {
               )
             })
           }
+        </div>
+        <div className="couter-box">
+          <Heading title="Vì sao khách hàng luôn tin tưởng và lựa chọn Ford Cần Thơ?" />
+          <div className="couter-row d-flex justify-content-around">
+            {
+              countList.map((item, i) => {
+                return (
+                  <CounterItem key={i} value={item.value} icon={item.icon} text={item.text} />
+                )
+              })
+            }
+          </div>
         </div>
         <div className="outstanding">
           <Heading title="Sản phẩm nổi bật" />
