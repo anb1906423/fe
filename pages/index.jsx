@@ -6,7 +6,7 @@ import UndertakeItem from '../components/UndertakeItem'
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import AccessItem from '../components/AccessItem'
-import CounterItem from '../components/CounterItem'
+// import CounterItem from '../components/CounterItem'
 import {
   FaCarAlt, FaCommentDollar, FaPhoneSquareAlt, FaFacebookSquare, FaMoneyCheckAlt, FaCalendarCheck, FaHandshake,
   FaChartLine, FaCar, FaUserCheck, FaUsers
@@ -103,7 +103,7 @@ export default function Home(products) {
             })
           }
         </div>
-        <div className="couter-box">
+        {/* <div className="couter-box">
           <Heading title="Vì sao khách hàng luôn tin tưởng và lựa chọn Ford Cần Thơ?" />
           <div className="couter-row d-flex justify-content-around">
             {
@@ -114,7 +114,7 @@ export default function Home(products) {
               })
             }
           </div>
-        </div>
+        </div> */}
         <div className="outstanding">
           <Heading title="Sản phẩm nổi bật" />
           <div className="product-container d-flex flex-row flex-wrap justify-content-start">
