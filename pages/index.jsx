@@ -6,7 +6,7 @@ import UndertakeItem from '../components/UndertakeItem'
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import AccessItem from '../components/AccessItem'
-// import CounterItem from '../components/CounterItem'
+import CounterItem from '../components/CounterItem'
 import {
   FaCarAlt, FaCommentDollar, FaPhoneSquareAlt, FaFacebookSquare, FaMoneyCheckAlt, FaCalendarCheck, FaHandshake,
   FaChartLine, FaCar, FaUserCheck, FaUsers
@@ -103,7 +103,7 @@ export default function Home(products) {
             })
           }
         </div>
-        {/* <div className="couter-box">
+        <div className="counter-box">
           <Heading title="Vì sao khách hàng luôn tin tưởng và lựa chọn Ford Cần Thơ?" />
           <div className="couter-row d-flex justify-content-around">
             {
@@ -114,7 +114,13 @@ export default function Home(products) {
               })
             }
           </div>
-        </div> */}
+        </div>
+        <div className="introduce-box">
+          <Heading title='Giới thiệu' />
+          <div>
+            <p className="">"Cần Thơ Ford - Đại lý ủy quyền chính thức của Ford Việt Nam - Là Đại lý lớn nhất, uy tín nhất tại đồng bằng sông Cửu Long, vận hành theo tiêu chuẩn QualityCare, Showroom theo tiêu chuẩn Brand@Retail mới nhất của Ford toàn cầu, có tổng diện tích xây dựng lên đến 5000m2, với hơn 150 nhân viên được đào tạo bài bản, chuyên nghiệp."</p>
+          </div>
+        </div>
         <div className="outstanding">
           <Heading title="Sản phẩm nổi bật" />
           <div className="product-container d-flex flex-row flex-wrap justify-content-start">

@@ -1,0 +1,70 @@
+.counter-box {
+    padding: 4px 0px 12px;
+}
+
+.counter-item {
+    margin-top: 16px;
+    color: var(--main-color);
+    border-radius: 6px;
+    padding: 16px;
+    min-width: 20%;
+    border: 1px solid var(--main-color);
+}
+
+.counter-item .counter-icon {
+    font-size: 24px;
+    top: 0%;
+    left: 50%;
+    background-color: var(--white);
+    padding: 8px;
+    transform: translateX(-50%) translateY(-62.5%);
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+.counter-item .counter-value h2 {
+    font-size: 40px;
+    margin: 6px;
+}
+
+.counter-text {
+    font-size: 14px;
+}
+
+.introduce-box {
+    text-align: justify;
+    padding: 0 12px;
+    max-width: 90%;
+    margin: 0px auto;
+}
+
+@media (max-width: 768px) {
+    .counter-item .counter-icon {
+        font-size: 22px;
+    }
+    .counter-item .counter-value h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .counter-item {
+        margin: 12px 4px;
+        padding: 10px;
+    }
+
+    .counter-item .counter-icon {
+        font-size: 18px;
+    }
+    
+    .counter-item .counter-value h2 {
+        font-size: 20px;
+    }
+    
+    .counter-text {
+        font-size: 10px;
+    }
+}
+
