@@ -50,6 +50,10 @@
 }
 
 @media (max-width: 576px) {
+    .counter-box {
+        padding-bottom: 0;
+    }
+
     .counter-item {
         margin: 12px 4px;
         padding: 10px;
@@ -61,6 +65,7 @@
     
     .counter-item .counter-value h2 {
         font-size: 20px;
+        margin-top: 12px;
     }
     
     .counter-text {
