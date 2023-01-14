@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { FaBars } from 'react-icons/fa'
 import $ from 'jquery'
 import Cookie, { useCookies } from 'react-cookie'
-import Modal from './Modal'
+// import Modal from './Modal'
 import { homeAPI } from "../config"
 import { swtoast } from "../mixins/swal.mixin";
 
@@ -19,39 +19,39 @@ const Header = () => {
   const [again, setAgain] = useState(false)
   const [registed, setRegisted] = useState(false)
 
-  const [isUserPage, setIsUserPage] = useState(false)
+  // const [isUserPage, setIsUserPage] = useState(false)
 
-  useEffect(() => {
-    const currentPath = window.location.pathname;
-    if (currentPath.includes('admin')) {
-      setIsUserPage(true)
-    }
-  }, []);
+  // useEffect(() => {
+  //   const currentPath = window.location.pathname;
+  //   if (currentPath.includes('admin')) {
+  //     setIsUserPage(true)
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    let timeoutId;
-    if (!isShowWindow && !again) {
-      timeoutId = setTimeout(() => {
-        setIsShowWindow(true);
-        setAgain(true)
-      }, 15000);
-    }
+  // useEffect(() => {
+  //   let timeoutId;
+  //   if (!isShowWindow && !again) {
+  //     timeoutId = setTimeout(() => {
+  //       setIsShowWindow(true);
+  //       setAgain(true)
+  //     }, 15000);
+  //   }
 
-    if (!isShowWindow && again && !registed) {
-      timeoutId = setTimeout(() => {
-        setIsShowWindow(true);
-      }, 15000);
-    }
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [isShowWindow]);
+  //   if (!isShowWindow && again && !registed) {
+  //     timeoutId = setTimeout(() => {
+  //       setIsShowWindow(true);
+  //     }, 15000);
+  //   }
+  //   return () => {
+  //     clearTimeout(timeoutId);
+  //   };
+  // }, [isShowWindow]);
 
-  useEffect(() => {
-    $('.box-icon-window').click(() => {
-      setIsShowWindow(false)
-    })
-  })
+  // useEffect(() => {
+  //   $('.box-icon-window').click(() => {
+  //     setIsShowWindow(false)
+  //   })
+  // })
 
   useEffect(() => {
     $(document).ready(function () {
@@ -117,58 +117,58 @@ const Header = () => {
     },
   ]
 
-  const fullNameRef = useRef()
-  const phoneNumberRef = useRef()
-  const modelRef = useRef()
+  // const fullNameRef = useRef()
+  // const phoneNumberRef = useRef()
+  // const modelRef = useRef()
 
-  const [fullName, setFullname] = useState('')
-  const [phoneNumber, setPhoneNumber] = useState('')
-  const [model, setModel] = useState('')
-  const [fullNameRequired, setFullnameRequired] = useState('')
-  const [phoneNumberRequired, setPhoneNumberRequired] = useState('')
-  const [err, setErr] = useState('')
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log('ávd');
-    if (fullName.length == 0) {
-      fullNameRef.current.focus()
-      setFullnameRequired("Vui lòng nhập họ và tên!!")
-      return
-    }
-    if (!(PHONENUMBER_REGEX.test(phoneNumber))) {
-      phoneNumberRef.current.focus()
-      setPhoneNumberRequired("Vui lòng nhập số điện thoại!!")
-      return
-    }
-    try {
-      const response = await fetch(`${homeAPI}/test-drive/register`, {
-        method: 'POST',
-        body: JSON.stringify({ fullName: fullName, phoneNumber: phoneNumber, model: model }),
-        headers: { 'Content-Type': 'application/json' }
-      });
-      const data = await response.json();
+  // const [fullName, setFullname] = useState('')
+  // const [phoneNumber, setPhoneNumber] = useState('')
+  // const [model, setModel] = useState('')
+  // const [fullNameRequired, setFullnameRequired] = useState('')
+  // const [phoneNumberRequired, setPhoneNumberRequired] = useState('')
+  // const [err, setErr] = useState('')
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   console.log('ávd');
+  //   if (fullName.length == 0) {
+  //     fullNameRef.current.focus()
+  //     setFullnameRequired("Vui lòng nhập họ và tên!!")
+  //     return
+  //   }
+  //   if (!(PHONENUMBER_REGEX.test(phoneNumber))) {
+  //     phoneNumberRef.current.focus()
+  //     setPhoneNumberRequired("Vui lòng nhập số điện thoại!!")
+  //     return
+  //   }
+  //   try {
+  //     const response = await fetch(`${homeAPI}/test-drive/register`, {
+  //       method: 'POST',
+  //       body: JSON.stringify({ fullName: fullName, phoneNumber: phoneNumber, model: model }),
+  //       headers: { 'Content-Type': 'application/json' }
+  //     });
+  //     const data = await response.json();
 
-      swtoast.success({
-        text: "Chúng tôi đã nhận được thông tin đăng ký của quý khách!",
-      });
-      setFullname('')
-      setPhoneNumber('')
-      setModel('')
-      setRegisted(true)
-      setIsShowWindow(false)
-    } catch (err) {
-      if (!err?.response) {
-        setErr('No Server Response!')
-      } else if (err.response?.status === 400) {
-        setErr('Vui lòng nhập đủ họ tên và số điện thoại!')
-      } else if (err.response?.status === 401) {
-        setErr('Unauthorized')
-      } else {
-        setErr('Register fail!')
-      }
-      console.log(err);
-    }
-  }
+  //     swtoast.success({
+  //       text: "Chúng tôi đã nhận được thông tin đăng ký của quý khách!",
+  //     });
+  //     setFullname('')
+  //     setPhoneNumber('')
+  //     setModel('')
+  //     setRegisted(true)
+  //     setIsShowWindow(false)
+  //   } catch (err) {
+  //     if (!err?.response) {
+  //       setErr('No Server Response!')
+  //     } else if (err.response?.status === 400) {
+  //       setErr('Vui lòng nhập đủ họ tên và số điện thoại!')
+  //     } else if (err.response?.status === 401) {
+  //       setErr('Unauthorized')
+  //     } else {
+  //       setErr('Register fail!')
+  //     }
+  //     console.log(err);
+  //   }
+  // }
   return (
     <div className="header-group">
       <Head>
@@ -197,7 +197,7 @@ const Header = () => {
               } else return <div className="menu-item" key={index}><a href={item.href}>{item.name}</a></div>
             })
           }
-          {!isUserPage ?
+          {/* {!isUserPage ?
             <div onClick={() => {
               setIsShowWindow(false)
             }} className={`modal-wrapper position-absolute ${isShowWindow ? '' : 'd-none'}`}>
@@ -218,7 +218,7 @@ const Header = () => {
                 handleSubmit={handleSubmit}
               />
             </div> : ''
-          }
+          } */}
         </div>
       </div>
       <div id="loader-wrapper">
