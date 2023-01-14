@@ -15,6 +15,10 @@ const HeaderAdmin = () => {
       name: 'Quản lý bảng giá',
       href: '/admin/ql-bang-gia',
     },
+    {
+      name: 'ĐK lái thử',
+      href: '/admin/dk-lai-thu',
+    },
   ]
   return (
     <div className='header-admin text-center'>

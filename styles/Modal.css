@@ -1,0 +1,78 @@
+.modal-wrapper {
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+    padding: 4px;
+    transition: all 0.5s ease;
+    /* background-color: rgba(0, 0, 255, 0.1); */
+    animation: showWindow .5s linear;
+}
+
+.modal-wrapper .box-icon-window {
+    right: 0;
+    top: 0;
+    padding: 0 6px;
+    cursor: pointer;
+}
+
+.modal-wrapper .window {
+    border-radius: 10px 10px 8px 8px;
+    background-color: var(--white);
+    width: 400px;
+    margin: 100px auto;
+    border: 2px solid var(--main-color);
+}
+
+.modal-wrapper .window .header-window {
+    background-color: var(--main-color);
+    border-radius: 8px 8px 0 0;
+    color: var(--white);
+    padding: 12px;
+}
+
+.header-window h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.modal-wrapper .window .container-window {
+    padding: 12px;
+    
+}
+
+.modal-wrapper .window input {
+    padding: 4px 6px;
+    margin: 8px 0;
+}
+
+.modal-wrapper .window button {
+    padding: 8px 6px;
+    border-radius: 4px;
+    margin: 6px 0;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: var(--white);
+    transition: all 0.1s linear;
+}
+
+.modal-wrapper .window button:hover {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}
+
+@media (max-width: 576px) {
+    .modal-wrapper .window {
+        max-width: 350px;
+    }
+}
+
+@keyframes showWindow {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    } 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

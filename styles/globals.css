@@ -15,6 +15,7 @@
 @import './Loading.css';
 @import './UndertakeItem.css';
 @import './Counter.css';
+@import './Modal.css';
 
 html,
 body {
